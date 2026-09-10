@@ -1,0 +1,29 @@
+[
+  {
+    "source": "A",
+    "rows": [
+      {"id": "P-001", "title": "注意力算子", "series": "認知", "status": "完成"},
+      {"id": "P-002", "title": "全域完成", "series": "工程", "status": "草稿"},
+      {"id": "P-003", "title": "概念積分", "series": "數學", "status": "進行中"},
+      {"id": "P-004", "title": "符號記憶", "series": "記憶", "status": "完成"}
+    ]
+  },
+  {
+    "source": "B",
+    "rows": [
+      {"paper_id": " p-001 ", "name": "注意力算子", "category": "認知", "state": "DONE"},
+      {"paper_id": "Ｐ－００２", "name": "全域完成", "category": "工程", "state": "DRAFT"},
+      {"paper_id": "P-004", "name": "符號記憶", "category": "記憶", "state": "in_progress"},
+      {"paper_id": "P-005", "name": "語義種子", "category": "語言", "state": "in_progress"}
+    ]
+  },
+  {
+    "source": "C",
+    "rows": [
+      {"稿號": "P-006", "標題": "注意力算子", "系列": "認知", "狀態": "完成"},
+      {"稿號": "P-007", "標題": "研究頁索引", "系列": "工程", "狀態": "草稿"},
+      {"稿號": " ", "標題": "待命名草稿", "系列": "待分類", "狀態": "草稿"},
+      {"稿號": "P-008", "標題": "域計算", "系列": "數學", "狀態": "done"}
+    ]
+  }
+]

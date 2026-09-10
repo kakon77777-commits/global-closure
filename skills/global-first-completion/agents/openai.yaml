@@ -1,0 +1,6 @@
+interface:
+  display_name: "Global Closure"
+  short_description: "Complete whole tasks with bounded, evidence-based validation"
+  default_prompt: "Use $global-first-completion to finish the requested scope, validate the whole result, and close remaining obligations."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,9 @@
+```python
+# 這行是程式碼，不是文件標題
+```
+
+# 工具設計 | Offline inventory
+
+This fictional note demonstrates a mixed-language document.
+
+來源、解析、報表與命令列必須接通，才構成可使用的工具。

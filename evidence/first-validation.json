@@ -1,0 +1,79 @@
+{
+  "platform": "linux",
+  "python": "3.12.14",
+  "node": "v24.19.0",
+  "source_preserved": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": "test_bom_is_removed_only_for_decoded_character_count (test_inventory.InventoryTests.test_bom_is_removed_only_for_decoded_character_count) ... ok\ntest_cli_integrates_all_outputs_without_mutating_sources (test_inventory.InventoryTests.test_cli_integrates_all_outputs_without_mutating_sources) ... ok\ntest_duplicates_do_not_normalize_newlines_or_bom (test_inventory.InventoryTests.test_duplicates_do_not_normalize_newlines_or_bom) ... ok\ntest_empty_directory_is_a_valid_complete_inventory (test_inventory.InventoryTests.test_empty_directory_is_a_valid_complete_inventory) ... ok\ntest_file_source_is_rejected (test_inventory.InventoryTests.test_file_source_is_rejected) ... ok\ntest_help_and_module_entrypoint (test_inventory.InventoryTests.test_help_and_module_entrypoint) ... ok\ntest_invalid_utf8_yields_partial_report_and_exit_one (test_inventory.InventoryTests.test_invalid_utf8_yields_partial_report_and_exit_one) ... ok\ntest_known_generated_directories_are_excluded (test_inventory.InventoryTests.test_known_generated_directories_are_excluded) ... ok\ntest_markdown_table_is_escaped_and_json_preserves_original_title (test_inventory.InventoryTests.test_markdown_table_is_escaped_and_json_preserves_original_title) ... ok\ntest_missing_source_fails_without_creating_output (test_inventory.InventoryTests.test_missing_source_fails_without_creating_output) ... ok\ntest_nested_symlinks_are_not_followed (test_inventory.InventoryTests.test_nested_symlinks_are_not_followed) ... ok\ntest_output_equal_to_source_is_rejected (test_inventory.InventoryTests.test_output_equal_to_source_is_rejected) ... ok\ntest_output_inside_source_is_rejected_without_overwriting (test_inventory.InventoryTests.test_output_inside_source_is_rejected_without_overwriting) ... ok\ntest_output_path_that_is_a_file_has_clear_failure (test_inventory.InventoryTests.test_output_path_that_is_a_file_has_clear_failure) ... ok\ntest_recursive_unicode_paths_extensions_and_title_fallback (test_inventory.InventoryTests.test_recursive_unicode_paths_extensions_and_title_fallback) ... ok\ntest_repeated_run_is_deterministic (test_inventory.InventoryTests.test_repeated_run_is_deterministic) ... ok\ntest_title_ignores_fenced_code_and_closing_hashes (test_inventory.InventoryTests.test_title_ignores_fenced_code_and_closing_hashes) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 1.503s\n\nOK\n"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/test_merge_records.mjs"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "✔ all twelve input rows retain provenance or a rejection (2.608834ms)\n✔ schema aliases and fullwidth identifiers normalize together (1.586022ms)\n✔ duplicate records keep both sources (0.334401ms)\n✔ conflicts keep each version without inflating completion (0.49981ms)\n✔ same title with different identifiers is not merged (0.493552ms)\n✔ invalid records retain original fields and source (0.309484ms)\n✔ unknown statuses cannot become valid records (0.528572ms)\n✔ series and status totals reconcile (0.375071ms)\n✔ input is not mutated or aliased into rejected output (1.403663ms)\n✔ empty input and repeated execution are stable (1.239111ms)\n✔ conflict-only series are retained with zero valid records (0.400125ms)\n✔ all five accepted series appear without inflating valid totals (0.278461ms)\n✔ a cross-series conflict counts once per affected series (0.794799ms)\n✔ malformed batches and ambiguous provenance are rejected clearly (1.997628ms)\n✔ real CLI writes a report with exit 1 and preserves source bytes (359.817206ms)\n✔ CLI rejects source overwrite and reports malformed JSON (554.245222ms)\nℹ tests 16\nℹ suites 0\nℹ pass 16\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1331.542084\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "-q",
+        "research_inventory",
+        "run.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "run.py",
+        "examples/papers",
+        "--output",
+        "sample-output"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "Indexed 4 documents; duplicate groups: 1; read issues: 0.\nComplete: inventory.json and inventory.md were written.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "record_merge.mjs",
+        "examples/research-batches.json",
+        "--output",
+        "sample-output/merged.json"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "Report written: 7 resolved ids; 1 conflicts; 1 rejected rows.\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "received": 12,
+    "accepted_rows": 11,
+    "rejected_rows": 1,
+    "unique_ids": 8,
+    "resolved_ids": 7,
+    "conflict_ids": 1,
+    "duplicate_extra_rows": 2,
+    "statuses": {
+      "done": 3,
+      "draft": 2,
+      "in_progress": 2
+    },
+    "by_series": [
+      {
+        "series": "工程",
+        "total": 2,
+        "done": 0,
+        "draft": 2,
+        "in_progress": 0,
+        "conflict_ids": 0
+      },
+      {
+        "series": "數學",
+        "total": 2,
+        "done": 1,
+        "draft": 0,
+        "in_progress": 1,
+        "conflict_ids": 0
+      },
+      {
+        "series": "記憶",
+        "total": 0,
+        "done": 0,
+        "draft": 0,
+        "in_progress": 0,
+        "conflict_ids": 1
+      },
+      {
+        "series": "認知",
+        "total": 2,
+        "done": 2,
+        "draft": 0,
+        "in_progress": 0,
+        "conflict_ids": 0
+      },
+      {
+        "series": "語言",
+        "total": 1,
+        "done": 0,
+        "draft": 0,
+        "in_progress": 1,
+        "conflict_ids": 0
+      }
+    ],
+    "repeated_titles": [
+      {
+        "title": "注意力算子",
+        "ids": [
+          "P-001",
+          "P-006"
+        ]
+      }
+    ]
+  },
+  "resolved": [
+    {
+      "id": "P-001",
+      "title": "注意力算子",
+      "series": "認知",
+      "status": "done",
+      "sources": [
+        "A:1",
+        "B:1"
+      ]
+    },
+    {
+      "id": "P-002",
+      "title": "全域完成",
+      "series": "工程",
+      "status": "draft",
+      "sources": [
+        "A:2",
+        "B:2"
+      ]
+    },
+    {
+      "id": "P-003",
+      "title": "概念積分",
+      "series": "數學",
+      "status": "in_progress",
+      "sources": [
+        "A:3"
+      ]
+    },
+    {
+      "id": "P-005",
+      "title": "語義種子",
+      "series": "語言",
+      "status": "in_progress",
+      "sources": [
+        "B:4"
+      ]
+    },
+    {
+      "id": "P-006",
+      "title": "注意力算子",
+      "series": "認知",
+      "status": "done",
+      "sources": [
+        "C:1"
+      ]
+    },
+    {
+      "id": "P-007",
+      "title": "研究頁索引",
+      "series": "工程",
+      "status": "draft",
+      "sources": [
+        "C:2"
+      ]
+    },
+    {
+      "id": "P-008",
+      "title": "域計算",
+      "series": "數學",
+      "status": "done",
+      "sources": [
+        "C:4"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "P-004",
+      "variants": [
+        {
+          "id": "P-004",
+          "title": "符號記憶",
+          "series": "記憶",
+          "status": "done",
+          "sources": [
+            "A:4"
+          ]
+        },
+        {
+          "id": "P-004",
+          "title": "符號記憶",
+          "series": "記憶",
+          "status": "in_progress",
+          "sources": [
+            "B:3"
+          ]
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "valid": false,
+      "source": "C:3",
+      "errors": [
+        "invalid_id"
+      ],
+      "original": {
+        "稿號": " ",
+        "標題": "待命名草稿",
+        "系列": "待分類",
+        "狀態": "草稿"
+      }
+    }
+  ]
+}

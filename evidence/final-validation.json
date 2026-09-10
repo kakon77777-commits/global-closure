@@ -1,0 +1,110 @@
+{
+  "platform": "linux",
+  "clean_extract": true,
+  "source_preserved": true,
+  "sample_outputs_identical": true,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": "test_bom_is_removed_only_for_decoded_character_count (test_inventory.InventoryTests.test_bom_is_removed_only_for_decoded_character_count) ... ok\ntest_cli_integrates_all_outputs_without_mutating_sources (test_inventory.InventoryTests.test_cli_integrates_all_outputs_without_mutating_sources) ... ok\ntest_duplicates_do_not_normalize_newlines_or_bom (test_inventory.InventoryTests.test_duplicates_do_not_normalize_newlines_or_bom) ... ok\ntest_empty_directory_is_a_valid_complete_inventory (test_inventory.InventoryTests.test_empty_directory_is_a_valid_complete_inventory) ... ok\ntest_file_source_is_rejected (test_inventory.InventoryTests.test_file_source_is_rejected) ... ok\ntest_help_and_module_entrypoint (test_inventory.InventoryTests.test_help_and_module_entrypoint) ... ok\ntest_invalid_utf8_yields_partial_report_and_exit_one (test_inventory.InventoryTests.test_invalid_utf8_yields_partial_report_and_exit_one) ... ok\ntest_known_generated_directories_are_excluded (test_inventory.InventoryTests.test_known_generated_directories_are_excluded) ... ok\ntest_markdown_table_is_escaped_and_json_preserves_original_title (test_inventory.InventoryTests.test_markdown_table_is_escaped_and_json_preserves_original_title) ... ok\ntest_missing_source_fails_without_creating_output (test_inventory.InventoryTests.test_missing_source_fails_without_creating_output) ... ok\ntest_nested_symlinks_are_not_followed (test_inventory.InventoryTests.test_nested_symlinks_are_not_followed) ... ok\ntest_output_equal_to_source_is_rejected (test_inventory.InventoryTests.test_output_equal_to_source_is_rejected) ... ok\ntest_output_inside_source_is_rejected_without_overwriting (test_inventory.InventoryTests.test_output_inside_source_is_rejected_without_overwriting) ... ok\ntest_output_path_that_is_a_file_has_clear_failure (test_inventory.InventoryTests.test_output_path_that_is_a_file_has_clear_failure) ... ok\ntest_recursive_unicode_paths_extensions_and_title_fallback (test_inventory.InventoryTests.test_recursive_unicode_paths_extensions_and_title_fallback) ... ok\ntest_repeated_run_is_deterministic (test_inventory.InventoryTests.test_repeated_run_is_deterministic) ... ok\ntest_title_ignores_fenced_code_and_closing_hashes (test_inventory.InventoryTests.test_title_ignores_fenced_code_and_closing_hashes) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 1.520s\n\nOK\n"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/test_merge_records.mjs"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "✔ all twelve input rows retain provenance or a rejection (2.714378ms)\n✔ schema aliases and fullwidth identifiers normalize together (1.715504ms)\n✔ duplicate records keep both sources (0.447015ms)\n✔ conflicts keep each version without inflating completion (0.366618ms)\n✔ same title with different identifiers is not merged (0.509479ms)\n✔ invalid records retain original fields and source (0.316565ms)\n✔ unknown statuses cannot become valid records (0.501408ms)\n✔ series and status totals reconcile (0.394039ms)\n✔ input is not mutated or aliased into rejected output (1.085656ms)\n✔ empty input and repeated execution are stable (1.370009ms)\n✔ conflict-only series are retained with zero valid records (0.351847ms)\n✔ all five accepted series appear without inflating valid totals (0.330286ms)\n✔ a cross-series conflict counts once per affected series (0.932039ms)\n✔ malformed batches and ambiguous provenance are rejected clearly (1.435967ms)\n✔ real CLI writes a report with exit 1 and preserves source bytes (301.861284ms)\n✔ CLI rejects source overwrite and reports malformed JSON (517.307976ms)\nℹ tests 16\nℹ suites 0\nℹ pass 16\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1187.240528\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "-q",
+        "research_inventory",
+        "run.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "run.py",
+        "examples/papers",
+        "--output",
+        "demo-output"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "Indexed 4 documents; duplicate groups: 1; read issues: 0.\nComplete: inventory.json and inventory.md were written.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "record_merge.mjs",
+        "examples/research-batches.json",
+        "--output",
+        "demo-output/merged.json"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "Report written: 7 resolved ids; 1 conflicts; 1 rejected rows.\n",
+      "stderr": ""
+    }
+  ],
+  "tested_source_sha256": {
+    ".gitattributes": "91c171a7f4e295966f6e40aba83b0a11a56b4c99b59b9c55fcf54f15df207bc0",
+    ".gitignore": "cbaa1b90478793fa39008227a494d65f86a4ef2bd51de4a13b3bb1a013f54147",
+    "AGENTS.md": "47baba3adb2464abdb582a9b7ce5258f27eea4bff6c5906bb2319eba44ff1d20",
+    "README.md": "433b3633c7e325fd97b30205c7d570d572e3ee5afdd99d5324465c3695b32af2",
+    "Run-Demo.ps1": "e2ab5894fe6874c930fbb113da88a0d681ea5cf229340d9209518531c8c16fa2",
+    "docs/VALIDATION.md": "c74551c1da0f937545557386aabf3e34cb905b78cfa8e5dfb6c51ff8bdd49dd7",
+    "docs/WORKFLOW.md": "18e2db2e7afcff57829f28651199179fe3af1889e760983be841b3e4d3a261d4",
+    "evidence/first-validation.json": "724fdc4d8e604f3f6beb61d878d9a4ef985d1c5b84f1d5b0402746eafe095d66",
+    "examples/papers/01_全域完成.md": "7197d4d2a2564f1d22e330cfa0dba237ba19f8e96ebaaba2389142912f8dbdc3",
+    "examples/papers/02_副本.md": "7197d4d2a2564f1d22e330cfa0dba237ba19f8e96ebaaba2389142912f8dbdc3",
+    "examples/papers/04_未命名草稿.MD": "61ff9a1ef1f2118600965b8034a8cded8482123fede8da48f34eabde6e7c2a86",
+    "examples/papers/ignored.txt": "624110bdddbaeb5cee3e70eeee7be7232d3e3ba6c52e4ead0ccca08c3f354691",
+    "examples/papers/子資料夾/03_工具設計.markdown": "348a3eb9deb637c62b0f9c89bfa40ad5e6ef16b5f2d25372bc3903fa406f1ff1",
+    "examples/research-batches.json": "c541942c9d0d42d7284cdba44df6abde6effca5894fc827696939675317eb41e",
+    "record_merge.mjs": "b0faf96a5c8a5eeb6eda0b4fecbe11ab49ff8555964006382f827057539dff51",
+    "research_inventory/__init__.py": "64e386e1b24a67ea43d36fde5dffc814898c807977e0f676a897c85ddf6f79b5",
+    "research_inventory/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "research_inventory/cli.py": "d429b718aa37c31affbbedae8cc5faf37b3293ed23e778fe24eba6578a2d4596",
+    "research_inventory/models.py": "0a605c95f1318695af2d4316a441fd5711ea5f185ce9022ecc09e6fc146c55af",
+    "research_inventory/reports.py": "fd897353913fe082dfa17b541cc91f990b198f25d346d8b66ca8d131d0f90758",
+    "research_inventory/scanner.py": "172962c0a04b39a18b5717e1aabd566f1b15006d8a76689fa6f91f1cfc25b786",
+    "run.py": "5596f3585563226dda5fd2a28fbf251e27d22a11021d32c5c2977af4226b06b1",
+    "sample-output/inventory.json": "df937e839fbfe744e3baecaa408131530aa158a52bb3d6c360feb97597248dfc",
+    "sample-output/inventory.md": "7503ce0559872b97f5aa4570727017ead5d99d44a015dc04af8d7edec042d1d2",
+    "sample-output/merged.json": "a1bf7da81b728a695bd738d290dc789909311eb0e436aa3317f7e14724571a77",
+    "skills/global-first-completion/SKILL.md": "35db65ce92397388283ca7272d9af640c578801f15c864afbea95d8733cc6ef8",
+    "skills/global-first-completion/agents/openai.yaml": "b10e608aac8b97233cd51db3d6355f1215e080e70251e212019d302b46040eb7",
+    "tests/test_inventory.py": "0a7a06095eccea33c6ee42a9556b68220add46f2e7bc1a8db1aa0ac18a39da6d",
+    "tests/test_merge_records.mjs": "665f49ee487d1efe609ea09e54b8da1b367a321d1b8f1f418c8d5db05dac27b7"
+  }
+}

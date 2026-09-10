@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "source_name": "papers",
+  "summary": {
+    "documents": 4,
+    "characters": 295,
+    "size_bytes": 643,
+    "duplicate_groups": 1,
+    "duplicate_extra_copies": 1,
+    "issues": 0,
+    "skipped_entries": 0
+  },
+  "documents": [
+    {
+      "path": "01_全域完成.md",
+      "title": "全域完成與任務閉合",
+      "characters": 53,
+      "size_bytes": 145,
+      "sha256": "7197d4d2a2564f1d22e330cfa0dba237ba19f8e96ebaaba2389142912f8dbdc3"
+    },
+    {
+      "path": "02_副本.md",
+      "title": "全域完成與任務閉合",
+      "characters": 53,
+      "size_bytes": 145,
+      "sha256": "7197d4d2a2564f1d22e330cfa0dba237ba19f8e96ebaaba2389142912f8dbdc3"
+    },
+    {
+      "path": "04_未命名草稿.MD",
+      "title": "04_未命名草稿",
+      "characters": 41,
+      "size_bytes": 117,
+      "sha256": "61ff9a1ef1f2118600965b8034a8cded8482123fede8da48f34eabde6e7c2a86"
+    },
+    {
+      "path": "子資料夾/03_工具設計.markdown",
+      "title": "工具設計 | Offline inventory",
+      "characters": 148,
+      "size_bytes": 236,
+      "sha256": "348a3eb9deb637c62b0f9c89bfa40ad5e6ef16b5f2d25372bc3903fa406f1ff1"
+    }
+  ],
+  "duplicates": [
+    {
+      "sha256": "7197d4d2a2564f1d22e330cfa0dba237ba19f8e96ebaaba2389142912f8dbdc3",
+      "paths": [
+        "01_全域完成.md",
+        "02_副本.md"
+      ]
+    }
+  ],
+  "issues": [],
+  "skipped": []
+}
