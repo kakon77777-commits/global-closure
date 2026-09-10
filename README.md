@@ -1,6 +1,6 @@
 # Global Closure｜全域閉合
 
-**可實際執行的離線研究稿整理 MVP，附 `global-first-completion` 開發技能。**
+**可實際執行的離線研究稿整理 MVP，附 `global-first-completion` 與 `lspr` 開發技能。**
 
 版本：**0.1.0**。本儲存庫保存兩個可執行工具、完整原始碼、範例、測試與技能。工具本身不呼叫 AI，不需要帳號、API Key 或第三方套件。
 
@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | 文件盤點 | 掃描真實資料夾、擷取標題與字元數、找出位元組相同的稿件、輸出 Markdown／JSON | Python 3.10+ |
 | 紀錄合併 | 合併 JSON 批次、統一欄位與稿號、去重、保留衝突及來源、產生完整統計 | Node.js 18+ |
-| 整合 SKILL | 引導 AI 先完成整體範圍，再集中驗證與修復 | 支援 SKILL 的 AI 工具 |
+| 開發 SKILL | 引導 AI 完成整體範圍，或對單一疑點進行最小必要修復 | 支援 SKILL 的 AI 工具 |
 
 兩個程式可獨立使用；只用文件盤點時不需要安裝 Node.js。所有範例資料均為虛構。
 
@@ -93,9 +93,19 @@ notepad .\demo-output\merged.json
 
 名稱 **Global Closure（全域閉合）** 表達「整個任務的交付義務都有交代」；技能的穩定識別名稱保留為 **`global-first-completion`**。
 
-完整技能位於 [`skills/global-first-completion/SKILL.md`](skills/global-first-completion/SKILL.md)，軟體開發入口 [`AGENTS.md`](AGENTS.md) 會引用它。此技能引導 AI 的工作流程，程式執行不依賴它。
+技能以不同責任分工組成；軟體開發入口 [`AGENTS.md`](AGENTS.md) 會依任務選用，程式執行不依賴技能。
 
-手動安裝至本機 Codex（PowerShell）：
+| 技能 | 主要責任 |
+| --- | --- |
+| [Global First Completion](skills/global-first-completion/SKILL.md) | 先接通完整系統，再集中驗證及收尾 |
+| [mssp-tdd-apr](https://github.com/kakon77777-commits/mssp-tdd-apr) | 可否證閉環與證據控制；由獨立儲存庫提供 |
+| [LSPR — Local Surgical Proof & Replacement](skills/lspr/SKILL.md) | 對已可運作系統的單一疑點，先建立 failing witness，再作最小必要替換 |
+
+LSPR 的核心是 **Replacement Boundary Detection**：判斷真正錯誤、必要替換及不可碰觸的鄰接部分。沒有 failing witness，就不替換；僅明確要求的純機械性修改例外。Proof 指可重現的反例證據，不等於形式數學證明。
+
+三者可以銜接，也可各自使用，不強制逐套執行。LSPR 的流程正文為 58 行；[獨立驗證紀錄](docs/LSPR-VALIDATION.md) 放在技能以外，不會被技能自動載入。
+
+手動安裝至本機 Codex（PowerShell；若要安裝 LSPR，將此段路徑中的 `global-first-completion` 換為 `lspr`）：
 
 ```powershell
 $skillDestination = if ($env:CODEX_HOME) {
@@ -114,6 +124,12 @@ Copy-Item -LiteralPath '.\skills\global-first-completion' -Destination $skillDes
 
 ```text
 使用 $global-first-completion 完成這個儲存庫內已授權的功能需求，接通主要流程、集中驗證、修復後交付。
+```
+
+對局部疑點可使用：
+
+```text
+使用 $lspr 檢查這個已可運作系統中的 limit=0 疑點。依既有契約建立反例，找出責任層，只替換必要實作，完成局部與邊界驗證後停止。
 ```
 
 ## 驗證

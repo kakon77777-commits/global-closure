@@ -1,0 +1,14 @@
+interface:
+  display_name: LSPR
+  short_description: Witness-first local repair with minimal global disturbance
+  default_prompt: Use $lspr to investigate this suspicious node and replace only the
+    necessary implementation if a failing witness justifies it.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

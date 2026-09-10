@@ -1,0 +1,117 @@
+{
+  "scope": "Three independent forward executions on isolated synthetic projects; not a general reliability benchmark.",
+  "skill_sha256": "a81a973fb30d9c02264354c06a2429b0250eed5b6a1f89d3546ec15a43da6028",
+  "case_selection": "Real adapter defect; test contract mismatch; unsubstantiated defect report.",
+  "oracle": "Each project has the same author-provided CONTRACT.md. Expected outcomes were retained outside agent workspaces.",
+  "cases": [
+    {
+      "name": "query-zero",
+      "task_summary": "Investigate a user report that explicit limit zero returns documents.",
+      "responsibility": "adapter",
+      "before_files": {
+        "CONTRACT.md": "# Document query contract v1\n\nThe program is a mostly working command-line document query system.\nRun it with a JSON object on stdin: python query_cli.py.\nThe public reply contains items, total, and limit.\n\n- Missing or null limit defaults to 2.\n- An explicit decimal limit from 0 through 100 is used as supplied.\n- An explicit zero returns an empty items list; total remains 3.\n- A limit greater than the number of stored documents returns all available documents.\n- A negative limit or a limit above 100 is rejected with process exit code 2.\n- The stored documents remain unchanged by queries.\n- These behaviors are compatibility requirements, not change proposals.\n\nThe query adapter translates the wire value into domain options.\nThe domain builds a result from the document store.\nThe command-line entry point exercises all three boundaries.\n",
+        "query_store.py": "class DocumentStore:\n    def __init__(self):\n        self._rows = [\n            {\"id\": \"a\", \"title\": \"Alpha\"},\n            {\"id\": \"b\", \"title\": \"Beta\"},\n            {\"id\": \"c\", \"title\": \"Gamma\"},\n        ]\n\n    def read_page(self, limit):\n        return [dict(row) for row in self._rows[:limit]]\n\n    def count(self):\n        return len(self._rows)\n",
+        "query_domain.py": "def query_page(store, options):\n    limit = options[\"limit\"]\n    return {\"items\": store.read_page(limit), \"total\": store.count(), \"limit\": limit}\n",
+        "query_adapter.py": "DEFAULT_LIMIT = 2\n\n\ndef decode_query(query):\n    raw = query.get(\"limit\")\n    limit = DEFAULT_LIMIT if raw is None else int(raw)\n    if limit < 0 or limit > 100:\n        raise ValueError(\"limit must be between 0 and 100\")\n    return {\"limit\": limit or DEFAULT_LIMIT}\n",
+        "query_cli.py": "import json\nimport sys\n\nfrom query_adapter import decode_query\nfrom query_domain import query_page\nfrom query_store import DocumentStore\n\n\ndef handle_query(query):\n    if not isinstance(query, dict):\n        raise ValueError(\"query must be an object\")\n    return query_page(DocumentStore(), decode_query(query))\n\n\ndef main():\n    try:\n        result = handle_query(json.load(sys.stdin))\n    except (ValueError, TypeError) as error:\n        print(str(error), file=sys.stderr)\n        return 2\n    print(json.dumps(result))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+        "test_query.py": "import unittest\nfrom query_cli import handle_query\n\n\nclass QueryTests(unittest.TestCase):\n    def test_default_page(self):\n        result = handle_query({})\n        self.assertEqual(len(result[\"items\"]), 2)\n        self.assertEqual(result[\"total\"], 3)\n\n    def test_explicit_limit(self):\n        self.assertEqual(len(handle_query({\"limit\": \"1\"})[\"items\"]), 1)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+        ".gitignore": "__pycache__/\n"
+      },
+      "after_changes": {
+        "query_adapter.py": "DEFAULT_LIMIT = 2\n\n\ndef decode_query(query):\n    raw = query.get(\"limit\")\n    limit = DEFAULT_LIMIT if raw is None else int(raw)\n    if limit < 0 or limit > 100:\n        raise ValueError(\"limit must be between 0 and 100\")\n    return {\"limit\": limit}\n",
+        "test_query.py": "import json\nfrom pathlib import Path\nimport subprocess\nimport sys\nimport unittest\n\nfrom query_adapter import decode_query\nfrom query_cli import handle_query\nfrom query_domain import query_page\nfrom query_store import DocumentStore\n\n\nclass QueryTests(unittest.TestCase):\n    def test_default_page(self):\n        result = handle_query({})\n        self.assertEqual(len(result[\"items\"]), 2)\n        self.assertEqual(result[\"total\"], 3)\n\n    def test_explicit_limit(self):\n        self.assertEqual(len(handle_query({\"limit\": \"1\"})[\"items\"]), 1)\n\n    def test_zero_limit(self):\n        for raw in (0, \"0\"):\n            with self.subTest(limit=raw):\n                self.assertEqual(decode_query({\"limit\": raw}), {\"limit\": 0})\n                self.assertEqual(\n                    handle_query({\"limit\": raw}),\n                    {\"items\": [], \"total\": 3, \"limit\": 0},\n                )\n\n    def test_null_limit_defaults(self):\n        result = handle_query({\"limit\": None})\n        self.assertEqual(result, handle_query({}))\n        self.assertEqual(result[\"limit\"], 2)\n\n    def test_limit_exceeding_store_size(self):\n        for limit in (4, 100):\n            with self.subTest(limit=limit):\n                result = handle_query({\"limit\": limit})\n                self.assertEqual(len(result[\"items\"]), 3)\n                self.assertEqual(result[\"total\"], 3)\n                self.assertEqual(result[\"limit\"], limit)\n\n    def test_queries_preserve_store(self):\n        store = DocumentStore()\n        original = store.read_page(100)\n        for limit in (0, 1, 100):\n            with self.subTest(limit=limit):\n                query_page(store, decode_query({\"limit\": limit}))\n                self.assertEqual(store.read_page(100), original)\n                self.assertEqual(store.count(), 3)\n\n    def run_cli(self, query):\n        return subprocess.run(\n            [sys.executable, str(Path(__file__).with_name(\"query_cli.py\"))],\n            input=json.dumps(query),\n            text=True,\n            capture_output=True,\n            check=False,\n        )\n\n    def test_cli_zero_limit(self):\n        result = self.run_cli({\"limit\": \"0\"})\n        self.assertEqual(result.returncode, 0, result.stderr)\n        self.assertEqual(result.stderr, \"\")\n        self.assertEqual(\n            json.loads(result.stdout), {\"items\": [], \"total\": 3, \"limit\": 0}\n        )\n\n    def test_cli_rejects_out_of_range(self):\n        for raw in (-1, \"-1\", 101, \"101\"):\n            with self.subTest(limit=raw):\n                result = self.run_cli({\"limit\": raw})\n                self.assertEqual(result.returncode, 2)\n                self.assertEqual(result.stdout, \"\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+      },
+      "expected_changed_files": [
+        "query_adapter.py",
+        "test_query.py"
+      ],
+      "expected_production_changes": [
+        "query_adapter.py"
+      ],
+      "baseline_test_exit": 0,
+      "witness": {
+        "input": {
+          "limit": "0"
+        },
+        "expected": {
+          "items": [],
+          "total": 3,
+          "limit": 0
+        },
+        "before_matches": false
+      },
+      "agent_record": "query-zero.md"
+    },
+    {
+      "name": "query-default",
+      "task_summary": "Investigate the failing test_default_page against the established contract.",
+      "responsibility": "test",
+      "before_files": {
+        "CONTRACT.md": "# Document query contract v1\n\nThe program is a mostly working command-line document query system.\nRun it with a JSON object on stdin: python query_cli.py.\nThe public reply contains items, total, and limit.\n\n- Missing or null limit defaults to 2.\n- An explicit decimal limit from 0 through 100 is used as supplied.\n- An explicit zero returns an empty items list; total remains 3.\n- A limit greater than the number of stored documents returns all available documents.\n- A negative limit or a limit above 100 is rejected with process exit code 2.\n- The stored documents remain unchanged by queries.\n- These behaviors are compatibility requirements, not change proposals.\n\nThe query adapter translates the wire value into domain options.\nThe domain builds a result from the document store.\nThe command-line entry point exercises all three boundaries.\n",
+        "query_store.py": "class DocumentStore:\n    def __init__(self):\n        self._rows = [\n            {\"id\": \"a\", \"title\": \"Alpha\"},\n            {\"id\": \"b\", \"title\": \"Beta\"},\n            {\"id\": \"c\", \"title\": \"Gamma\"},\n        ]\n\n    def read_page(self, limit):\n        return [dict(row) for row in self._rows[:limit]]\n\n    def count(self):\n        return len(self._rows)\n",
+        "query_domain.py": "def query_page(store, options):\n    limit = options[\"limit\"]\n    return {\"items\": store.read_page(limit), \"total\": store.count(), \"limit\": limit}\n",
+        "query_adapter.py": "DEFAULT_LIMIT = 2\n\n\ndef decode_query(query):\n    raw = query.get(\"limit\")\n    limit = DEFAULT_LIMIT if raw is None else int(raw)\n    if limit < 0 or limit > 100:\n        raise ValueError(\"limit must be between 0 and 100\")\n    return {\"limit\": limit}\n",
+        "query_cli.py": "import json\nimport sys\n\nfrom query_adapter import decode_query\nfrom query_domain import query_page\nfrom query_store import DocumentStore\n\n\ndef handle_query(query):\n    if not isinstance(query, dict):\n        raise ValueError(\"query must be an object\")\n    return query_page(DocumentStore(), decode_query(query))\n\n\ndef main():\n    try:\n        result = handle_query(json.load(sys.stdin))\n    except (ValueError, TypeError) as error:\n        print(str(error), file=sys.stderr)\n        return 2\n    print(json.dumps(result))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+        "test_query.py": "import unittest\nfrom query_cli import handle_query\n\n\nclass QueryTests(unittest.TestCase):\n    def test_default_page(self):\n        result = handle_query({})\n        self.assertEqual(len(result[\"items\"]), 3)\n        self.assertEqual(result[\"total\"], 3)\n\n    def test_explicit_limit(self):\n        self.assertEqual(len(handle_query({\"limit\": \"1\"})[\"items\"]), 1)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+        ".gitignore": "__pycache__/\n"
+      },
+      "after_changes": {
+        "test_query.py": "import unittest\nfrom query_cli import handle_query\n\n\nclass QueryTests(unittest.TestCase):\n    def test_default_page(self):\n        result = handle_query({})\n        self.assertEqual(len(result[\"items\"]), 2)\n        self.assertEqual(result[\"total\"], 3)\n\n    def test_explicit_limit(self):\n        self.assertEqual(len(handle_query({\"limit\": \"1\"})[\"items\"]), 1)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+      },
+      "expected_changed_files": [
+        "test_query.py"
+      ],
+      "expected_production_changes": [],
+      "baseline_test_exit": 1,
+      "witness": {
+        "input": {},
+        "expected": {
+          "items": [
+            {
+              "id": "a",
+              "title": "Alpha"
+            },
+            {
+              "id": "b",
+              "title": "Beta"
+            }
+          ],
+          "total": 3,
+          "limit": 2
+        },
+        "before_matches": true
+      },
+      "agent_record": "query-default.md"
+    },
+    {
+      "name": "query-report",
+      "task_summary": "Investigate a suspicion that explicit limit zero is treated as the default.",
+      "responsibility": "none established",
+      "before_files": {
+        "CONTRACT.md": "# Document query contract v1\n\nThe program is a mostly working command-line document query system.\nRun it with a JSON object on stdin: python query_cli.py.\nThe public reply contains items, total, and limit.\n\n- Missing or null limit defaults to 2.\n- An explicit decimal limit from 0 through 100 is used as supplied.\n- An explicit zero returns an empty items list; total remains 3.\n- A limit greater than the number of stored documents returns all available documents.\n- A negative limit or a limit above 100 is rejected with process exit code 2.\n- The stored documents remain unchanged by queries.\n- These behaviors are compatibility requirements, not change proposals.\n\nThe query adapter translates the wire value into domain options.\nThe domain builds a result from the document store.\nThe command-line entry point exercises all three boundaries.\n",
+        "query_store.py": "class DocumentStore:\n    def __init__(self):\n        self._rows = [\n            {\"id\": \"a\", \"title\": \"Alpha\"},\n            {\"id\": \"b\", \"title\": \"Beta\"},\n            {\"id\": \"c\", \"title\": \"Gamma\"},\n        ]\n\n    def read_page(self, limit):\n        return [dict(row) for row in self._rows[:limit]]\n\n    def count(self):\n        return len(self._rows)\n",
+        "query_domain.py": "def query_page(store, options):\n    limit = options[\"limit\"]\n    return {\"items\": store.read_page(limit), \"total\": store.count(), \"limit\": limit}\n",
+        "query_adapter.py": "DEFAULT_LIMIT = 2\n\n\ndef decode_query(query):\n    raw = query.get(\"limit\")\n    limit = DEFAULT_LIMIT if raw is None else int(raw)\n    if limit < 0 or limit > 100:\n        raise ValueError(\"limit must be between 0 and 100\")\n    return {\"limit\": limit}\n",
+        "query_cli.py": "import json\nimport sys\n\nfrom query_adapter import decode_query\nfrom query_domain import query_page\nfrom query_store import DocumentStore\n\n\ndef handle_query(query):\n    if not isinstance(query, dict):\n        raise ValueError(\"query must be an object\")\n    return query_page(DocumentStore(), decode_query(query))\n\n\ndef main():\n    try:\n        result = handle_query(json.load(sys.stdin))\n    except (ValueError, TypeError) as error:\n        print(str(error), file=sys.stderr)\n        return 2\n    print(json.dumps(result))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+        "test_query.py": "import unittest\nfrom query_cli import handle_query\n\n\nclass QueryTests(unittest.TestCase):\n    def test_default_page(self):\n        result = handle_query({})\n        self.assertEqual(len(result[\"items\"]), 2)\n        self.assertEqual(result[\"total\"], 3)\n\n    def test_explicit_limit(self):\n        self.assertEqual(len(handle_query({\"limit\": \"1\"})[\"items\"]), 1)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+        ".gitignore": "__pycache__/\n"
+      },
+      "after_changes": {},
+      "expected_changed_files": [],
+      "expected_production_changes": [],
+      "baseline_test_exit": 0,
+      "witness": {
+        "input": {
+          "limit": "0"
+        },
+        "expected": {
+          "items": [],
+          "total": 3,
+          "limit": 0
+        },
+        "before_matches": true
+      },
+      "agent_record": "query-report.md"
+    }
+  ]
+}

@@ -1,0 +1,305 @@
+{
+  "executed_at_utc": "2026-09-10T18:30:42.616143+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "skill_sha256": "a81a973fb30d9c02264354c06a2429b0250eed5b6a1f89d3546ec15a43da6028",
+  "fixture_sha256": "72504582d2893219a3a24b98efdaccd1e4a8e04a7e0431d9f9ddb361808f2f12",
+  "method": "Independent replay of stored before/after artifacts; no new agent execution",
+  "cases": [
+    {
+      "name": "query-zero",
+      "responsibility": "adapter",
+      "changed_files": [
+        "query_adapter.py",
+        "test_query.py"
+      ],
+      "production_changed": [
+        "query_adapter.py"
+      ],
+      "preserved_files": [
+        ".gitignore",
+        "CONTRACT.md",
+        "query_cli.py",
+        "query_domain.py",
+        "query_store.py"
+      ],
+      "before_sha256": {
+        "CONTRACT.md": "42e1940c320bd94447ea35e38fa0ac775baa38aadb3e0f0fb91da7cc0c9652c9",
+        "query_store.py": "ca4c302ab570121e4b6012ad7ade9be9033e30bc6b7fea9898752fc21c84b847",
+        "query_domain.py": "2150ad3b2f2d8b22de26bce50f756cb5ac75e6b35f5c77899541894c499d5307",
+        "query_adapter.py": "ffc135e36f37fa6205ab8a524406d8054c9f798122fef5871a62082c759d84f9",
+        "query_cli.py": "99ebb593ca1b770ec3a07b121b818d5b2aa0652ee85a2753dd5d49faff3e433e",
+        "test_query.py": "5900d6d658a20f24d3ca3bacb7200dd8b5ce8136d7b1b1751965606ad1d3777d",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+      },
+      "after_sha256": {
+        "CONTRACT.md": "42e1940c320bd94447ea35e38fa0ac775baa38aadb3e0f0fb91da7cc0c9652c9",
+        "query_store.py": "ca4c302ab570121e4b6012ad7ade9be9033e30bc6b7fea9898752fc21c84b847",
+        "query_domain.py": "2150ad3b2f2d8b22de26bce50f756cb5ac75e6b35f5c77899541894c499d5307",
+        "query_adapter.py": "cc08a41b979463681ef58a34cc335411214d71019a2ac8c2a2b1dbdd1c6e0826",
+        "query_cli.py": "99ebb593ca1b770ec3a07b121b818d5b2aa0652ee85a2753dd5d49faff3e433e",
+        "test_query.py": "e5881b531625b5c0ab615bb7b21b1b96bd1a1491a6d9aef084c50eff5eb7ad3c",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+      },
+      "before_witness": {
+        "command": [
+          "python",
+          "query_cli.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"items\": [{\"id\": \"a\", \"title\": \"Alpha\"}, {\"id\": \"b\", \"title\": \"Beta\"}], \"total\": 3, \"limit\": 2}\n",
+        "stderr": "",
+        "input": {
+          "limit": "0"
+        },
+        "expected": {
+          "items": [],
+          "total": 3,
+          "limit": 0
+        },
+        "matches_contract": false
+      },
+      "after_witness": {
+        "command": [
+          "python",
+          "query_cli.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"items\": [], \"total\": 3, \"limit\": 0}\n",
+        "stderr": "",
+        "input": {
+          "limit": "0"
+        },
+        "expected": {
+          "items": [],
+          "total": 3,
+          "limit": 0
+        },
+        "matches_contract": true
+      },
+      "before_tests": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_default_page (test_query.QueryTests.test_default_page) ... ok\ntest_explicit_limit (test_query.QueryTests.test_explicit_limit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "after_tests": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_cli_rejects_out_of_range (test_query.QueryTests.test_cli_rejects_out_of_range) ... ok\ntest_cli_zero_limit (test_query.QueryTests.test_cli_zero_limit) ... ok\ntest_default_page (test_query.QueryTests.test_default_page) ... ok\ntest_explicit_limit (test_query.QueryTests.test_explicit_limit) ... ok\ntest_limit_exceeding_store_size (test_query.QueryTests.test_limit_exceeding_store_size) ... ok\ntest_null_limit_defaults (test_query.QueryTests.test_null_limit_defaults) ... ok\ntest_queries_preserve_store (test_query.QueryTests.test_queries_preserve_store) ... ok\ntest_zero_limit (test_query.QueryTests.test_zero_limit) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.383s\n\nOK\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "query-default",
+      "responsibility": "test",
+      "changed_files": [
+        "test_query.py"
+      ],
+      "production_changed": [],
+      "preserved_files": [
+        ".gitignore",
+        "CONTRACT.md",
+        "query_adapter.py",
+        "query_cli.py",
+        "query_domain.py",
+        "query_store.py"
+      ],
+      "before_sha256": {
+        "CONTRACT.md": "42e1940c320bd94447ea35e38fa0ac775baa38aadb3e0f0fb91da7cc0c9652c9",
+        "query_store.py": "ca4c302ab570121e4b6012ad7ade9be9033e30bc6b7fea9898752fc21c84b847",
+        "query_domain.py": "2150ad3b2f2d8b22de26bce50f756cb5ac75e6b35f5c77899541894c499d5307",
+        "query_adapter.py": "cc08a41b979463681ef58a34cc335411214d71019a2ac8c2a2b1dbdd1c6e0826",
+        "query_cli.py": "99ebb593ca1b770ec3a07b121b818d5b2aa0652ee85a2753dd5d49faff3e433e",
+        "test_query.py": "49961ca2c5f71c6fddf97b09c71192490bf9437e52ccab2d63627c0e480dfd39",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+      },
+      "after_sha256": {
+        "CONTRACT.md": "42e1940c320bd94447ea35e38fa0ac775baa38aadb3e0f0fb91da7cc0c9652c9",
+        "query_store.py": "ca4c302ab570121e4b6012ad7ade9be9033e30bc6b7fea9898752fc21c84b847",
+        "query_domain.py": "2150ad3b2f2d8b22de26bce50f756cb5ac75e6b35f5c77899541894c499d5307",
+        "query_adapter.py": "cc08a41b979463681ef58a34cc335411214d71019a2ac8c2a2b1dbdd1c6e0826",
+        "query_cli.py": "99ebb593ca1b770ec3a07b121b818d5b2aa0652ee85a2753dd5d49faff3e433e",
+        "test_query.py": "5900d6d658a20f24d3ca3bacb7200dd8b5ce8136d7b1b1751965606ad1d3777d",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+      },
+      "before_witness": {
+        "command": [
+          "python",
+          "query_cli.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"items\": [{\"id\": \"a\", \"title\": \"Alpha\"}, {\"id\": \"b\", \"title\": \"Beta\"}], \"total\": 3, \"limit\": 2}\n",
+        "stderr": "",
+        "input": {},
+        "expected": {
+          "items": [
+            {
+              "id": "a",
+              "title": "Alpha"
+            },
+            {
+              "id": "b",
+              "title": "Beta"
+            }
+          ],
+          "total": 3,
+          "limit": 2
+        },
+        "matches_contract": true
+      },
+      "after_witness": {
+        "command": [
+          "python",
+          "query_cli.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"items\": [{\"id\": \"a\", \"title\": \"Alpha\"}, {\"id\": \"b\", \"title\": \"Beta\"}], \"total\": 3, \"limit\": 2}\n",
+        "stderr": "",
+        "input": {},
+        "expected": {
+          "items": [
+            {
+              "id": "a",
+              "title": "Alpha"
+            },
+            {
+              "id": "b",
+              "title": "Beta"
+            }
+          ],
+          "total": 3,
+          "limit": 2
+        },
+        "matches_contract": true
+      },
+      "before_tests": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "test_default_page (test_query.QueryTests.test_default_page) ... FAIL\ntest_explicit_limit (test_query.QueryTests.test_explicit_limit) ... ok\n\n======================================================================\nFAIL: test_default_page (test_query.QueryTests.test_default_page)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/tmp/lspr-replay-709dr8fy/before/test_query.py\", line 8, in test_default_page\n    self.assertEqual(len(result[\"items\"]), 3)\nAssertionError: 2 != 3\n\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nFAILED (failures=1)\n"
+      },
+      "after_tests": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_default_page (test_query.QueryTests.test_default_page) ... ok\ntest_explicit_limit (test_query.QueryTests.test_explicit_limit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "passed": true
+    },
+    {
+      "name": "query-report",
+      "responsibility": "none established",
+      "changed_files": [],
+      "production_changed": [],
+      "preserved_files": [
+        ".gitignore",
+        "CONTRACT.md",
+        "query_adapter.py",
+        "query_cli.py",
+        "query_domain.py",
+        "query_store.py",
+        "test_query.py"
+      ],
+      "before_sha256": {
+        "CONTRACT.md": "42e1940c320bd94447ea35e38fa0ac775baa38aadb3e0f0fb91da7cc0c9652c9",
+        "query_store.py": "ca4c302ab570121e4b6012ad7ade9be9033e30bc6b7fea9898752fc21c84b847",
+        "query_domain.py": "2150ad3b2f2d8b22de26bce50f756cb5ac75e6b35f5c77899541894c499d5307",
+        "query_adapter.py": "cc08a41b979463681ef58a34cc335411214d71019a2ac8c2a2b1dbdd1c6e0826",
+        "query_cli.py": "99ebb593ca1b770ec3a07b121b818d5b2aa0652ee85a2753dd5d49faff3e433e",
+        "test_query.py": "5900d6d658a20f24d3ca3bacb7200dd8b5ce8136d7b1b1751965606ad1d3777d",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+      },
+      "after_sha256": {
+        "CONTRACT.md": "42e1940c320bd94447ea35e38fa0ac775baa38aadb3e0f0fb91da7cc0c9652c9",
+        "query_store.py": "ca4c302ab570121e4b6012ad7ade9be9033e30bc6b7fea9898752fc21c84b847",
+        "query_domain.py": "2150ad3b2f2d8b22de26bce50f756cb5ac75e6b35f5c77899541894c499d5307",
+        "query_adapter.py": "cc08a41b979463681ef58a34cc335411214d71019a2ac8c2a2b1dbdd1c6e0826",
+        "query_cli.py": "99ebb593ca1b770ec3a07b121b818d5b2aa0652ee85a2753dd5d49faff3e433e",
+        "test_query.py": "5900d6d658a20f24d3ca3bacb7200dd8b5ce8136d7b1b1751965606ad1d3777d",
+        ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+      },
+      "before_witness": {
+        "command": [
+          "python",
+          "query_cli.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"items\": [], \"total\": 3, \"limit\": 0}\n",
+        "stderr": "",
+        "input": {
+          "limit": "0"
+        },
+        "expected": {
+          "items": [],
+          "total": 3,
+          "limit": 0
+        },
+        "matches_contract": true
+      },
+      "after_witness": {
+        "command": [
+          "python",
+          "query_cli.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"items\": [], \"total\": 3, \"limit\": 0}\n",
+        "stderr": "",
+        "input": {
+          "limit": "0"
+        },
+        "expected": {
+          "items": [],
+          "total": 3,
+          "limit": 0
+        },
+        "matches_contract": true
+      },
+      "before_tests": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_default_page (test_query.QueryTests.test_default_page) ... ok\ntest_explicit_limit (test_query.QueryTests.test_explicit_limit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "after_tests": {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "test_default_page (test_query.QueryTests.test_default_page) ... ok\ntest_explicit_limit (test_query.QueryTests.test_explicit_limit) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}
