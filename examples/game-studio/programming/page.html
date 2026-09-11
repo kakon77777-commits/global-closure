@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Key &amp; Door — A tiny quest</title>
+  <style>
+    :root { color-scheme: light; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: #203c39; background: #e6ecdd; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: radial-gradient(ellipse at 20% 0%, #f6f8ed, transparent 60%), #e6ecdd; }
+    main { width: min(100%, 540px); padding: 30px; background: #fcfcf5; border: 1px solid #cbd6c3; border-radius: 24px; box-shadow: 0 18px 60px #203c3914; }
+    .eyebrow { margin: 0 0 8px; text-transform: uppercase; letter-spacing: .15em; font-size: .7rem; font-weight: 800; color: #547065; }
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 2.8rem); letter-spacing: -.055em; line-height: 1.1; }
+    .intro { margin: 12px 0 24px; color: #536960; line-height: 1.5; }
+    .status-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; font-size: .8rem; }
+    .inventory { background: #f8e6b4; border: 1px solid #e4ce97; border-radius: 100px; padding: 7px 12px; font-weight: 750; }
+    .moves { font-variant-numeric: tabular-nums; color: #536960; }
+    .board-frame { border: 7px solid #405c50; border-radius: 13px; overflow: hidden; background: #e8edd5; box-shadow: 0 4px 0 #203c39; }
+    .board { position: relative; display: grid; grid-template-columns: repeat({{WIDTH}}, 1fr); aspect-ratio: {{WIDTH}} / {{HEIGHT}}; }
+    .tile { position: relative; aspect-ratio: 1; }
+    .tile img, .entity { position: absolute; display: block; width: 100%; height: 100%; user-select: none; pointer-events: none; }
+    .entity { width: calc(100% / {{WIDTH}}); height: calc(100% / {{HEIGHT}}); }
+    [hidden] { display: none !important; }
+    .board[data-state="unlocked"] #exit { filter: drop-shadow(0 0 4px #f6c760); }
+    .board[data-state="won"] { box-shadow: inset 0 0 0 4px #f6c760; }
+    .progress { margin-top: 24px; }
+    #objective { margin: 0; font-size: 1rem; line-height: 1.45; font-weight: 800; }
+    #feedback { min-height: 2.8em; margin: 6px 0 20px; color: #536960; font-size: .85rem; line-height: 1.4; }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid #dde3d5; padding-top: 20px; }
+    .controls { margin: 0; font-size: .78rem; line-height: 1.75; color: #536960; }
+    kbd { font: inherit; color: #203c39; font-weight: 750; }
+    button { flex-shrink: 0; border: 1px solid #203c39; border-radius: 10px; background: #203c39; color: #fcfcf5; padding: 11px 17px; font: inherit; font-size: .84rem; font-weight: 750; cursor: pointer; }
+    button:hover { background: #356157; }
+    button:focus-visible { outline: 3px solid #b87947; outline-offset: 3px; }
+    noscript { display: block; padding: 12px; background: #f8e6b4; margin: 16px 0; }
+    @media (max-width: 440px) { main { padding: 22px 18px; } footer { gap: 12px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">A tiny quest</p>
+    <h1>Key &amp; Door</h1>
+    <p class="intro">A brass key. A locked door. Find your way out of this little stone room.</p>
+    <div class="status-row"><span class="inventory" id="inventory">Key: not found</span><span class="moves" id="moves">0 moves</span></div>
+    <div class="board-frame"><div class="board" id="board" role="img" aria-label="Game room" aria-describedby="objective controls">{{BOARD}}</div></div>
+    <div class="progress" aria-live="polite" aria-atomic="true">
+      <p id="objective">Find the brass key, then enter the door.</p>
+      <p id="feedback">A little room, a little adventure.</p>
+    </div>
+    <noscript>This game needs JavaScript enabled in your browser.</noscript>
+    <footer>
+      <p class="controls" id="controls"><kbd>Arrow keys</kbd> or <kbd>W A S D</kbd> to move<br>One press, one step · <kbd>R</kbd> to restart</p>
+      <button type="button" id="restart">Restart</button>
+    </footer>
+  </main>
+  <script id="level-data" type="application/json">{{LEVEL_DATA}}</script>
+  <script id="game-runtime">{{GAME_RUNTIME}}</script>
+</body>
+</html>

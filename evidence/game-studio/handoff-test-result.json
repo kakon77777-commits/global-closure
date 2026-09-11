@@ -1,0 +1,23 @@
+{
+  "executed_date": "2026-09-11",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "command": "python evidence/game-studio/test_handoff.py /root/.codex/skills/remote-skills/ai-game-studio/scripts/studio_handoff.py",
+  "tests_run": 9,
+  "exit_code": 0,
+  "result": "OK",
+  "obligations": [
+    "fresh handoff accepts and preserves sources",
+    "changed artifact rejects",
+    "changed contract rejects",
+    "advanced revision rejects",
+    "world change without revision rejects",
+    "wrong project or recipient rejects",
+    "existing packet not overwritten",
+    "missing or outside artifact rejects",
+    "ACK requires reply reference"
+  ],
+  "limits": [
+    "No network delivery, context identity authentication, semantic acceptance, or Windows execution is established by these tests."
+  ]
+}

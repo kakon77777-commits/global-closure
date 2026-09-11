@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "id": "2311e2bf-9cc8-4793-9d7a-8bcda2fc7b58",
+  "created_at_utc": "2026-09-11T10:14:47.482500+00:00",
+  "project_id": "key-door-studio-demo",
+  "revision": 1,
+  "world": {
+    "path": "studio/world.json",
+    "sha256": "80951e95ffd2e8cf2e04543f4e2b22d304a1bad361d43a9144005bb3a1a8b9d0"
+  },
+  "from_role": "programming",
+  "to_role": "art",
+  "source_context": "/root/studio_programming",
+  "kind": "ACK",
+  "reply_to": "e3b6a17b-45cb-45a2-a499-37e1bc5111df",
+  "summary": "# Programming ACK of art delivery\n\nThis is a receiver-produced ACK by the real programming context\n`/root/studio_programming`, addressed to `/root/studio_art`, replying to DELIVER\n`e3b6a17b-45cb-45a2-a499-37e1bc5111df`. The project is\n`key-door-studio-demo`, shared world revision 1. The shared contract and world\nare unchanged.\n\nI read the art delivery note and packet, manifest, production evidence and actual\nSVG assets, along with the current contract and world. The handoff helper\nreturned `CURRENT` for the delivery's exact pinned bytes. I did not alter the\nart source, parameters, assets, preview, or evidence.\n\n`programming/build.py` consumes `art/generated/manifest.json`, reads each\nreferenced SVG, checks the contracted IDs and 32px dimensions/viewBox, and embeds\nits exact bytes as an image data URI in `index.html`. All five IDs are used in\nthe emitted board. Floors precede walls and entities; key and exit overlays\nprecede player. Input/output hashes are recorded in\n`programming/generated/build-evidence.json`.\n\nThe witness executing the HTML's shipped JS confirmed exact SVG-byte presence\nin the emitted image sources and actual markup use of all IDs. It observed the\nkey image's hidden property become true on collection and false after restart;\nit observed the player position update to the exit while the player element\nremains layered last. Visible text assignments communicate key possession,\nlocked-door feedback, door readiness and victory. These claims come from\n`programming/generated/runtime-evidence.json`, whose seven grouped checks passed.\n\nTechnical integration acceptance covers the embedded bytes, image markup order\nand runtime DOM assignments. It does not establish successful image decoding,\nactual CSS layout or perceptual clarity in a browser. Art's separate rendered\npreview observation remains art's evidence. No actual game-browser inspection or\nhuman playtest was possible on this host, and no browser was downloaded.\n\nThere is no missing art asset or integration-format decision. The next useful\nvisual check is to open the delivered HTML in an available desktop browser and\ninspect initial, key-collected and won states. This ACK makes no broader product\nor independent visual-acceptance claim.\n",
+  "contracts": [
+    {
+      "path": "studio/game-contract.json",
+      "sha256": "1f238eda7ee5daecabe26aee996896155d239b083988f43ac6e9f6c956c943c4",
+      "bytes": 1516
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "index.html",
+      "sha256": "fe6001654c6776bf65f71a0c54d3a629a815c80db925cf389d2bad5d6a7941d2",
+      "bytes": 29604
+    },
+    {
+      "path": "programming/build.py",
+      "sha256": "f8820694819821311bcca852abeecdc6d79c19fb1d6d4fe45ec46789f370939b",
+      "bytes": 5473
+    },
+    {
+      "path": "programming/page.html",
+      "sha256": "8e1834f8a26e48ca1eadd41e185ae17d20a25943aba6010f86ed18e5dc1c3da1",
+      "bytes": 4262
+    },
+    {
+      "path": "programming/runtime.js",
+      "sha256": "39f8e59e90f6f3764c39cebe652d6a23418c3272fcd42d9d8ea799ebdf19611c",
+      "bytes": 3730
+    },
+    {
+      "path": "programming/verify_runtime.cjs",
+      "sha256": "ab280af65d3b9653a6210e70d2e898c6a7f6dd9497f10314144a32a4f6f0537e",
+      "bytes": 8326
+    },
+    {
+      "path": "programming/generated/build-evidence.json",
+      "sha256": "c53bc8278a5ae07bcab7aa3e534bc75912f674559300e8c89410bbd34e027176",
+      "bytes": 1966
+    },
+    {
+      "path": "programming/generated/runtime-evidence.json",
+      "sha256": "66005ea928b5644156869a5b0fba7c4f02a2d10d3b5c1f8a90d75ad35a7dfebc",
+      "bytes": 7158
+    },
+    {
+      "path": "programming/README.md",
+      "sha256": "2eb9e4efaf6f9b56c64ee5dacdbe6d95e024e5ec455b68d82ce4593754a260e1",
+      "bytes": 4492
+    }
+  ]
+}

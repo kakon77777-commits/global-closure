@@ -1,0 +1,23 @@
+{
+  "palette": {
+    "ink": "#203C39",
+    "floor": "#E8EDD5",
+    "floor_line": "#CDD8B9",
+    "wall": "#5F7D68",
+    "wall_light": "#98AE82",
+    "wall_dark": "#405C50",
+    "player": "#239692",
+    "player_light": "#73CEB6",
+    "face": "#FFF2D4",
+    "gold": "#F6C760",
+    "gold_light": "#FFE9A6",
+    "wood": "#B87947",
+    "wood_light": "#DBAA6E"
+  },
+  "geometry": {
+    "outline": 1.5,
+    "wall_corner": 3.5,
+    "player_scale": 0.95,
+    "key_angle": -32
+  }
+}

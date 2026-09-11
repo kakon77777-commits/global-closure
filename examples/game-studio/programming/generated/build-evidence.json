@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "producer": "programming/build.py",
+  "project_id": "key-door-studio-demo",
+  "revision": 1,
+  "parameters": {
+    "seed": null,
+    "art_encoding": "exact SVG bytes as base64 data URIs"
+  },
+  "consumed_sha256": {
+    "studio/game-contract.json": "1f238eda7ee5daecabe26aee996896155d239b083988f43ac6e9f6c956c943c4",
+    "studio/world.json": "80951e95ffd2e8cf2e04543f4e2b22d304a1bad361d43a9144005bb3a1a8b9d0",
+    "design/generated/level.json": "75c8a6387def87a916b568dabaff55a9d2d110c0c432fd7a1ceb2b013f684eaf",
+    "design/level_tool.py": "e19e4a2f2d297492896820107bab245c0b4ce676109f512b4929ca297d829153",
+    "art/generated/manifest.json": "f93a12cbe3f39e27a14f046e781aa1844c152de8ff205ffc397448fb385f6d6a",
+    "programming/build.py": "f8820694819821311bcca852abeecdc6d79c19fb1d6d4fe45ec46789f370939b",
+    "programming/page.html": "8e1834f8a26e48ca1eadd41e185ae17d20a25943aba6010f86ed18e5dc1c3da1",
+    "programming/runtime.js": "39f8e59e90f6f3764c39cebe652d6a23418c3272fcd42d9d8ea799ebdf19611c",
+    "art/generated/floor.svg": "bd9094b8d836e8c11a1a844f1e8c4f6110ca73baa783120207a67647664a667c",
+    "art/generated/wall.svg": "dc388c97c8a8bc6b3d1edd5b612412286e7dd32588fb67378826dab26f07e8fc",
+    "art/generated/player.svg": "17c9b8990789d1837026ad80347d16b51e878c93c1b93af8065372b9cae68c95",
+    "art/generated/key.svg": "8aa02ff69f78a309439844143d08a026722e14600626c82cb5a8c38876cc4f3c",
+    "art/generated/exit.svg": "2b2aae6a9e68bfb08e7e4b75971f544f6128be7892a2cf3664a2fd751b94799e"
+  },
+  "output": {
+    "path": "index.html",
+    "sha256": "fe6001654c6776bf65f71a0c54d3a629a815c80db925cf389d2bad5d6a7941d2",
+    "bytes": 29604
+  },
+  "consumer_checks": {
+    "design_validator": true,
+    "solution_steps": 16,
+    "svg_ids": [
+      "floor",
+      "wall",
+      "player",
+      "key",
+      "exit"
+    ],
+    "svg_dimensions": 32
+  },
+  "boundary": "Importer and emitted bytes verified here; runtime replay is recorded separately."
+}

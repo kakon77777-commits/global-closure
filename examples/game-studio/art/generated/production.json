@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "producer": "art/generate_assets.py",
+  "source_sha256": {
+    "art/generate_assets.py": "2c46a3af07ce29bdd1abf2dca64dc3b4dc3987e312cc446ee0ff66089b000cf6",
+    "art/palette.json": "a2b7e3e13043b059160b9fa368207381193c2ee5b563270a21bf86aa44fad4b9",
+    "studio/game-contract.json": "1f238eda7ee5daecabe26aee996896155d239b083988f43ac6e9f6c956c943c4"
+  },
+  "parameters": {
+    "palette": {
+      "ink": "#203C39",
+      "floor": "#E8EDD5",
+      "floor_line": "#CDD8B9",
+      "wall": "#5F7D68",
+      "wall_light": "#98AE82",
+      "wall_dark": "#405C50",
+      "player": "#239692",
+      "player_light": "#73CEB6",
+      "face": "#FFF2D4",
+      "gold": "#F6C760",
+      "gold_light": "#FFE9A6",
+      "wood": "#B87947",
+      "wood_light": "#DBAA6E"
+    },
+    "geometry": {
+      "outline": 1.5,
+      "wall_corner": 3.5,
+      "player_scale": 0.95,
+      "key_angle": -32
+    }
+  },
+  "randomness": "none; output is deterministic for identical input bytes",
+  "preview_level": {
+    "path": "design/generated/level.json",
+    "sha256": "75c8a6387def87a916b568dabaff55a9d2d110c0c432fd7a1ceb2b013f684eaf"
+  },
+  "outputs_sha256": {
+    "art/generated/floor.svg": "bd9094b8d836e8c11a1a844f1e8c4f6110ca73baa783120207a67647664a667c",
+    "art/generated/wall.svg": "dc388c97c8a8bc6b3d1edd5b612412286e7dd32588fb67378826dab26f07e8fc",
+    "art/generated/player.svg": "17c9b8990789d1837026ad80347d16b51e878c93c1b93af8065372b9cae68c95",
+    "art/generated/key.svg": "8aa02ff69f78a309439844143d08a026722e14600626c82cb5a8c38876cc4f3c",
+    "art/generated/exit.svg": "2b2aae6a9e68bfb08e7e4b75971f544f6128be7892a2cf3664a2fd751b94799e",
+    "art/generated/manifest.json": "f93a12cbe3f39e27a14f046e781aa1844c152de8ff205ffc397448fb385f6d6a",
+    "art/generated/preview.svg": "788b4da7888c64d77692375c825de69ac3f40a5e7a62fe59724d0f280bcf9b43"
+  },
+  "contract_checks": [
+    "five contracted IDs",
+    "32px width, height and viewBox",
+    "parseable SVG",
+    "no referenced or external content",
+    "project-relative manifest paths"
+  ]
+}

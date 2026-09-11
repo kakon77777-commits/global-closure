@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "command": "python art/check_assets.py",
+  "observed_context": "/root/studio_art",
+  "input_production_sha256": "ee495316f5a32600cd12923025647d64789e8cacb9d981e048db8866d7ffd4a2",
+  "positive_witnesses": [
+    "Manifest contains all five contracted asset IDs in contract order.",
+    "Five SVGs parse, use a 32x32 viewBox and dimensions, and contain no linked content.",
+    "Current source, palette, contract and outputs match production hashes.",
+    "Regeneration from source and palette reproduces all five SVG files exactly.",
+    "Changing only the player color changes only the player asset; all alternatives validate.",
+    "Preview is reproduced from the produced SVG files and declared level, and parses as SVG."
+  ],
+  "falsifying_witnesses": {
+    "wrong_viewbox": "player: expected SVG with a 0 0 32 32 viewBox",
+    "linked_raster": "key: SVG must contain only its own vector drawing"
+  },
+  "limits": [
+    "These witnesses concern the art producer and files, not runtime gameplay.",
+    "In-process regeneration does not establish a clean-machine build or global minimal architecture.",
+    "SVG parsing alone does not establish visual quality; visual observations are in the art delivery note."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "tile_size": 32,
+  "assets": {
+    "floor": "art/generated/floor.svg",
+    "wall": "art/generated/wall.svg",
+    "player": "art/generated/player.svg",
+    "key": "art/generated/key.svg",
+    "exit": "art/generated/exit.svg"
+  }
+}

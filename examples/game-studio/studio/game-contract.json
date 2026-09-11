@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "gameplay": {
+    "movement": "one cardinal grid cell per action; reject walls and out-of-bounds moves",
+    "win": "enter exit after collecting key",
+    "before_key": "exit tile is blocked until key is collected",
+    "level_path": "design/generated/level.json",
+    "level_format": {
+      "width": "integer 5",
+      "height": "integer 5",
+      "walls": "list of [x,y] integer coordinates",
+      "player": "[x,y] initial position",
+      "key": "[x,y]",
+      "exit": "[x,y]"
+    },
+    "constraints": [
+      "All coordinates in bounds; walls and three entities do not overlap.",
+      "Player can reach key, then exit through non-wall cells; pre-key path must not require entering exit."
+    ],
+    "coordinates": "[x,y], origin top-left, x right, y down"
+  },
+  "art": {
+    "medium": "Generated SVG vector assets, 32 by 32 viewBox; no external raster generation needed for this small vector example.",
+    "ids": [
+      "floor",
+      "wall",
+      "player",
+      "key",
+      "exit"
+    ],
+    "manifest_path": "art/generated/manifest.json",
+    "manifest_format": {
+      "tile_size": 32,
+      "assets": "object mapping each required asset ID to a project-relative SVG file path"
+    }
+  },
+  "runtime": {
+    "entry": "index.html",
+    "controls": "arrow keys or WASD; restart control",
+    "observable": "key possession and win status are visible; all five asset types are used",
+    "offline": "no network fetch, accounts, third-party libraries or online service required"
+  }
+}

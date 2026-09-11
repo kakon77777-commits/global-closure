@@ -1,0 +1,51 @@
+{
+  "executed_date": "2026-09-11",
+  "method": "Fresh temporary project copy; ran all three producer tools and the actual emitted JavaScript witness. No original conversation, browser or network used.",
+  "html_sha256_before": "fe6001654c6776bf65f71a0c54d3a629a815c80db925cf389d2bad5d6a7941d2",
+  "html_sha256_rebuilt": "fe6001654c6776bf65f71a0c54d3a629a815c80db925cf389d2bad5d6a7941d2",
+  "html_byte_identical": true,
+  "runtime_checks": 7,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "design/level_tool.py",
+        "build"
+      ],
+      "exit_code": 0,
+      "stdout": "Built /tmp/game-studio-replay-4qlahyqy/project/design/generated/level.json; valid key-and-exit route: 16 steps.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "art/generate_assets.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Generated 5 SVG assets, manifest and preview in art/generated\nPreview level: design/generated/level.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "programming/build.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Built index.html (29604 bytes); consumed level and 5 SVG assets.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "programming/verify_runtime.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "7/7 runtime checks passed; browser playtest: not performed.\n",
+      "stderr": ""
+    }
+  ],
+  "limits": [
+    "Linux execution; Windows browser interaction not tested.",
+    "The JavaScript witness uses a DOM double; this does not establish browser rendering or human experience."
+  ]
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img">
+  <title>Gold key</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.12"/>
+  <g transform="rotate(-32 16 16)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M13 14H28V20H24V17H21V20H17V18H13Z" fill="#F6C760"/>
+    <path d="M9 9.5A6.5 6.5 0 1 1 9 22.5A6.5 6.5 0 1 1 9 9.5Z M9 13.3A2.7 2.7 0 1 0 9 18.7A2.7 2.7 0 1 0 9 13.3Z" fill="#F6C760" fill-rule="evenodd"/>
+    <path d="M5.5 13Q7 11 9 11 M17 15.2H26.5" fill="none" stroke="#FFE9A6" stroke-width="1"/>
+  </g>
+</svg>

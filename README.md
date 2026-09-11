@@ -105,6 +105,8 @@ LSPR 的核心是 **Replacement Boundary Detection**：判斷真正錯誤、必�
 
 三者可以銜接，也可各自使用，不強制逐套執行。LSPR 的流程正文為 58 行；[獨立驗證紀錄](docs/LSPR-VALIDATION.md) 放在技能以外，不會被技能自動載入。
 
+新增 [AI Game Studio](skills/ai-game-studio/SKILL.md)：以遊戲程式、美術、企劃三位 AI 架構師協作，各自打造並使用專用工具，透過共同專案與版本化交接跨對話接續。[角色說明、使用提示與驗證](docs/AI-GAME-STUDIO.md)。
+
 手動安裝至本機 Codex（PowerShell；若要安裝 LSPR，將此段路徑中的 `global-first-completion` 換為 `lspr`）：
 
 ```powershell

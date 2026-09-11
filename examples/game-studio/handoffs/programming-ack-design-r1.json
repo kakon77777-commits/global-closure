@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "id": "aec1b005-01dc-4748-ae8b-8bc1b4aafe1e",
+  "created_at_utc": "2026-09-11T10:14:46.779586+00:00",
+  "project_id": "key-door-studio-demo",
+  "revision": 1,
+  "world": {
+    "path": "studio/world.json",
+    "sha256": "80951e95ffd2e8cf2e04543f4e2b22d304a1bad361d43a9144005bb3a1a8b9d0"
+  },
+  "from_role": "programming",
+  "to_role": "design",
+  "source_context": "/root/studio_programming",
+  "kind": "ACK",
+  "reply_to": "7d6feb40-1300-4804-afe0-9c1878aa8ffd",
+  "summary": "# Programming ACK of design delivery\n\nThis is a receiver-produced ACK by the real programming context\n`/root/studio_programming`, addressed to `/root/studio_design`, replying to\nDELIVER `7d6feb40-1300-4804-afe0-9c1878aa8ffd`. The project is\n`key-door-studio-demo`, shared world revision 1. The contract and world are\nunchanged.\n\nI read the current world and contract, the delivery note and packet, the design\nsource/tool, the saved level JSON and design evidence. The handoff helper returned\n`CURRENT` for the delivery's pinned bytes. That result establishes snapshot\nintegrity; this note separately states the technical acceptance performed here.\n\n`programming/build.py` reads the actual saved `design/generated/level.json` and\ncalls `design/level_tool.py`'s `validate_level` on it with the shared contract.\nIt embeds that JSON directly in `index.html`. The generated build evidence binds\nthe consumed level and validator hashes to the HTML output. I did not rerun the\ndesign-owned producers in place or modify their outputs; the design role's\nrecorded 13-case run remains its own evidence.\n\nThe actual JavaScript extracted from the HTML ran under Node with a minimal DOM\ndouble. Through its registered keyboard callback, design's\n`up right down right right right` sequence produced bounds, wall and locked-exit\nblocks, ending at `[3,0]` with no key or win and three accepted moves. Its saved\n16-move solution collected the key at move 8 and won at move 16. The checks also\nobserved key-image hiding, key/objective text assignments, a stable won state,\nand Restart returning all gameplay state to the initial values. The removed-lock\nnegative witness was rejected by the same locked-exit check. Seven grouped\nruntime checks passed; details are in\n`programming/generated/runtime-evidence.json`.\n\nTechnical acceptance: the delivered design data is genuinely consumed by the\nbuild and supports the contracted behavior in the shipped JS. Product acceptance\nis limited: a real browser, image rendering, CSS layout, focus/accessibility,\nhuman playtesting and enjoyment were not observed. No fresh-machine structural\nreconstruction or exhaustive discriminative claim is made.\n\nThe runtime and evidence are offered to the real design context as the scoped\npeer for this integration event. Its own later ACK/CONCUR or CHALLENGE must be\nread for any independent conclusion; this sender does not claim it in advance.\nThe next useful action is to inspect that peer result and, when a browser is\navailable, open the self-contained HTML for an actual playtest. No design\ndecision or contract change is requested.\n",
+  "contracts": [
+    {
+      "path": "studio/game-contract.json",
+      "sha256": "1f238eda7ee5daecabe26aee996896155d239b083988f43ac6e9f6c956c943c4",
+      "bytes": 1516
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "index.html",
+      "sha256": "fe6001654c6776bf65f71a0c54d3a629a815c80db925cf389d2bad5d6a7941d2",
+      "bytes": 29604
+    },
+    {
+      "path": "programming/build.py",
+      "sha256": "f8820694819821311bcca852abeecdc6d79c19fb1d6d4fe45ec46789f370939b",
+      "bytes": 5473
+    },
+    {
+      "path": "programming/page.html",
+      "sha256": "8e1834f8a26e48ca1eadd41e185ae17d20a25943aba6010f86ed18e5dc1c3da1",
+      "bytes": 4262
+    },
+    {
+      "path": "programming/runtime.js",
+      "sha256": "39f8e59e90f6f3764c39cebe652d6a23418c3272fcd42d9d8ea799ebdf19611c",
+      "bytes": 3730
+    },
+    {
+      "path": "programming/verify_runtime.cjs",
+      "sha256": "ab280af65d3b9653a6210e70d2e898c6a7f6dd9497f10314144a32a4f6f0537e",
+      "bytes": 8326
+    },
+    {
+      "path": "programming/generated/build-evidence.json",
+      "sha256": "c53bc8278a5ae07bcab7aa3e534bc75912f674559300e8c89410bbd34e027176",
+      "bytes": 1966
+    },
+    {
+      "path": "programming/generated/runtime-evidence.json",
+      "sha256": "66005ea928b5644156869a5b0fba7c4f02a2d10d3b5c1f8a90d75ad35a7dfebc",
+      "bytes": 7158
+    },
+    {
+      "path": "programming/README.md",
+      "sha256": "2eb9e4efaf6f9b56c64ee5dacdbe6d95e024e5ec455b68d82ce4593754a260e1",
+      "bytes": 4492
+    }
+  ]
+}

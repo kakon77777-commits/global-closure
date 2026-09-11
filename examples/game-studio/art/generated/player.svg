@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img">
+  <title>Teal adventurer</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.15"/>
+  <g transform="translate(0.8 0.8) scale(0.95)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 24V28H14V25 M18 25V28H22V24" fill="#203C39"/>
+    <path d="M10 18Q16 14 22 18L24 25Q16 29 8 25Z" fill="#239692"/>
+    <path d="M16 18V26" fill="none" stroke="#73CEB6"/>
+    <circle cx="16" cy="10.5" r="7" fill="#239692"/>
+    <path d="M10.5 10Q16 7 21.5 10V12Q16 19 10.5 12Z" fill="#FFF2D4"/>
+    <path d="M12 6.5Q16 4.5 20 6.5" fill="none" stroke="#73CEB6"/>
+    <circle cx="13.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <circle cx="18.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <path d="M11 22H21" fill="none"/>
+    <rect x="14.5" y="20.5" width="3" height="3" rx="0.5" fill="#F6C760"/>
+  </g>
+</svg>

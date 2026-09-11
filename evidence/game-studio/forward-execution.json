@@ -1,0 +1,81 @@
+{
+  "project": "key-door-studio-demo",
+  "revision": 1,
+  "observed_contexts": {
+    "design": "/root/studio_design",
+    "art": "/root/studio_art",
+    "programming": "/root/studio_programming"
+  },
+  "method": "Three fresh role contexts; file-based DELIVERs, real programming ACKs, resumed design peer check; no inherited producer chat passed to programming.",
+  "peer_note": "examples/game-studio/design/runtime-peer-review-r1.md",
+  "peer_conclusion": "CONCUR within recorded source/hash and runtime-evidence boundary",
+  "delivered_packet_checks": [
+    {
+      "packet": "art-r1-deliver.json",
+      "kind": "DELIVER",
+      "from_role": "art",
+      "to_role": "programming",
+      "reply_to": null,
+      "verification": {
+        "status": "CURRENT",
+        "id": "e3b6a17b-45cb-45a2-a499-37e1bc5111df",
+        "role": "programming",
+        "scope": "snapshot and file integrity only; no semantic approval or peer receipt"
+      }
+    },
+    {
+      "packet": "design-deliver-r1.json",
+      "kind": "DELIVER",
+      "from_role": "design",
+      "to_role": "programming",
+      "reply_to": null,
+      "verification": {
+        "status": "CURRENT",
+        "id": "7d6feb40-1300-4804-afe0-9c1878aa8ffd",
+        "role": "programming",
+        "scope": "snapshot and file integrity only; no semantic approval or peer receipt"
+      }
+    },
+    {
+      "packet": "programming-ack-art-r1.json",
+      "kind": "ACK",
+      "from_role": "programming",
+      "to_role": "art",
+      "reply_to": "e3b6a17b-45cb-45a2-a499-37e1bc5111df",
+      "verification": {
+        "status": "CURRENT",
+        "id": "2311e2bf-9cc8-4793-9d7a-8bcda2fc7b58",
+        "role": "art",
+        "scope": "snapshot and file integrity only; no semantic approval or peer receipt"
+      }
+    },
+    {
+      "packet": "programming-ack-design-r1.json",
+      "kind": "ACK",
+      "from_role": "programming",
+      "to_role": "design",
+      "reply_to": "7d6feb40-1300-4804-afe0-9c1878aa8ffd",
+      "verification": {
+        "status": "CURRENT",
+        "id": "aec1b005-01dc-4748-ae8b-8bc1b4aafe1e",
+        "role": "design",
+        "scope": "snapshot and file integrity only; no semantic approval or peer receipt"
+      }
+    }
+  ],
+  "limits": [
+    "Role strings and hashes are not identity authentication.",
+    "This was an in-session multi-context exercise with persistent file handoffs, not an unattended service across closed ChatGPT sessions.",
+    "Windows browser interaction and human gameplay quality remain unverified."
+  ],
+  "forward_tested_skill_sha256": {
+    "SKILL.md": "006af71c3d28bedc8c47d293e768a5f40ed0fa045f6d5cc3422d1c1b7ce0707d",
+    "scripts/studio_handoff.py": "a2470e0638d4badafbb1dcc01fc884caf661b815fb1a19dd5d6ed682db7a7cd6",
+    "references/methods.md": "87c28c6547774d27240803ed23c6b68094ded500506294ac4f951ca18809d31a",
+    "references/design.md": "78c60a5395d240954767cd51bb2de27c46da0585aa5eb5a22e8fb2dbcaef9baf",
+    "references/art.md": "61933f16f707069852d8ec82031108f15d32293a5a0ef3eb3b7939762a8dfe3c",
+    "references/programming.md": "7ad2a986034509ca983cf1e327571c7f12b938762532d56b70dc4174502e26cf",
+    "references/handoff.md": "54e5a89de36cabe514aad6e899e816e6dd57bf6f98166f03736478ab8e7080ca",
+    "agents/openai.yaml": "0e39af728639851e0d7840d1a27bb52f2b9b747673d326eb4c2b425cffe8e65e"
+  }
+}

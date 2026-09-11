@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "producer": "design/level_tool.py",
+  "source_sha256": "6b690b51e064837d8dcd597219db7bc86f079c111f371d2b0ec36160de675224",
+  "tool_sha256": "e19e4a2f2d297492896820107bab245c0b4ce676109f512b4929ca297d829153",
+  "contract_sha256": "1f238eda7ee5daecabe26aee996896155d239b083988f43ac6e9f6c956c943c4",
+  "output_sha256": "75c8a6387def87a916b568dabaff55a9d2d110c0c432fd7a1ceb2b013f684eaf",
+  "algorithm": "Breadth-first search: player-to-key with exit blocked, then key-to-exit.",
+  "parameters": {
+    "source": "design/level-layout.txt",
+    "output": "design/generated/level.json",
+    "seed": null,
+    "neighbor_order": [
+      "right",
+      "down",
+      "left",
+      "up"
+    ]
+  },
+  "proof": {
+    "accepted": true,
+    "path_to_key": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "path_key_to_exit": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "steps_to_key": 8,
+    "steps_key_to_exit": 8,
+    "total_steps": 16,
+    "actions": [
+      "down",
+      "down",
+      "right",
+      "right",
+      "down",
+      "down",
+      "left",
+      "left",
+      "right",
+      "right",
+      "right",
+      "right",
+      "up",
+      "up",
+      "up",
+      "up"
+    ]
+  }
+}

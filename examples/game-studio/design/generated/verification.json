@@ -1,0 +1,451 @@
+{
+  "schema": 1,
+  "passed": true,
+  "checks": [
+    {
+      "case": "generated_file_matches_source",
+      "passed": true,
+      "observation": "Compiled the saved source and compared the generated JSON values."
+    },
+    {
+      "case": "accepted_level_has_8_then_8_step_route",
+      "passed": true,
+      "observation": {
+        "accepted": true,
+        "path_to_key": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "path_key_to_exit": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "steps_to_key": 8,
+        "steps_key_to_exit": 8,
+        "total_steps": 16,
+        "actions": [
+          "down",
+          "down",
+          "right",
+          "right",
+          "down",
+          "down",
+          "left",
+          "left",
+          "right",
+          "right",
+          "right",
+          "right",
+          "up",
+          "up",
+          "up",
+          "up"
+        ]
+      }
+    },
+    {
+      "case": "accepted_reflection_and_wall_reordering",
+      "passed": true,
+      "observation": {
+        "total_steps": 16
+      }
+    },
+    {
+      "case": "reject_key_behind_locked_exit",
+      "passed": true,
+      "observation": {
+        "expected": "KEY_UNREACHABLE_BEFORE_EXIT",
+        "actual": "KEY_UNREACHABLE_BEFORE_EXIT"
+      }
+    },
+    {
+      "case": "door_first_fixture_is_connected_if_lock_is_ignored",
+      "passed": true,
+      "observation": {
+        "otherwise_open_route": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "exit_on_route": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "case": "reject_isolated_key",
+      "passed": true,
+      "observation": {
+        "expected": "KEY_UNREACHABLE_BEFORE_EXIT",
+        "actual": "KEY_UNREACHABLE_BEFORE_EXIT"
+      }
+    },
+    {
+      "case": "reject_exit_unreachable_after_key",
+      "passed": true,
+      "observation": {
+        "expected": "EXIT_UNREACHABLE_AFTER_KEY",
+        "actual": "EXIT_UNREACHABLE_AFTER_KEY"
+      }
+    },
+    {
+      "case": "reject_entity_overlap",
+      "passed": true,
+      "observation": {
+        "expected": "ENTITY_OVERLAP",
+        "actual": "ENTITY_OVERLAP"
+      }
+    },
+    {
+      "case": "reject_out_of_bounds_entity",
+      "passed": true,
+      "observation": {
+        "expected": "COORDINATE_BOUNDS",
+        "actual": "COORDINATE_BOUNDS"
+      }
+    },
+    {
+      "case": "reject_entity_wall_overlap",
+      "passed": true,
+      "observation": {
+        "expected": "ENTITY_WALL_OVERLAP",
+        "actual": "ENTITY_WALL_OVERLAP"
+      }
+    },
+    {
+      "case": "reject_boolean_coordinate",
+      "passed": true,
+      "observation": {
+        "expected": "COORDINATE_TYPE",
+        "actual": "COORDINATE_TYPE"
+      }
+    },
+    {
+      "case": "replay_blocks_bounds_wall_and_locked_exit",
+      "passed": true,
+      "observation": [
+        {
+          "action": "up",
+          "position": [
+            0,
+            0
+          ],
+          "result": "blocked_bounds",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            1,
+            0
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "down",
+          "position": [
+            1,
+            0
+          ],
+          "result": "blocked_wall",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            2,
+            0
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            3,
+            0
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            3,
+            0
+          ],
+          "result": "blocked_exit",
+          "has_key": false,
+          "won": false
+        }
+      ]
+    },
+    {
+      "case": "saved_level_replay_collects_key_before_win",
+      "passed": true,
+      "observation": [
+        {
+          "action": "down",
+          "position": [
+            0,
+            1
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "down",
+          "position": [
+            0,
+            2
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            1,
+            2
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            2,
+            2
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "down",
+          "position": [
+            2,
+            3
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "down",
+          "position": [
+            2,
+            4
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "left",
+          "position": [
+            1,
+            4
+          ],
+          "result": "moved",
+          "has_key": false,
+          "won": false
+        },
+        {
+          "action": "left",
+          "position": [
+            0,
+            4
+          ],
+          "result": "key_collected",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            1,
+            4
+          ],
+          "result": "moved",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            2,
+            4
+          ],
+          "result": "moved",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            3,
+            4
+          ],
+          "result": "moved",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "right",
+          "position": [
+            4,
+            4
+          ],
+          "result": "moved",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "up",
+          "position": [
+            4,
+            3
+          ],
+          "result": "moved",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "up",
+          "position": [
+            4,
+            2
+          ],
+          "result": "moved",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "up",
+          "position": [
+            4,
+            1
+          ],
+          "result": "moved",
+          "has_key": true,
+          "won": false
+        },
+        {
+          "action": "up",
+          "position": [
+            4,
+            0
+          ],
+          "result": "won",
+          "has_key": true,
+          "won": true
+        }
+      ]
+    }
+  ],
+  "input": "design/generated/level.json",
+  "input_sha256": "75c8a6387def87a916b568dabaff55a9d2d110c0c432fd7a1ceb2b013f684eaf",
+  "contract_sha256": "1f238eda7ee5daecabe26aee996896155d239b083988f43ac6e9f6c956c943c4",
+  "tool_sha256": "e19e4a2f2d297492896820107bab245c0b4ce676109f512b4929ca297d829153",
+  "witness_sha256": "42e20374aabb4a27c752fd2f33417004b181b53085703f6e390d45075f403bad",
+  "consumer": "design/verify_design.py independent movement replay model",
+  "scope": "One deterministic 5x5 level; finite named witnesses, not exhaustive engine testing.",
+  "runtime_integration": "Pending programming receiver evidence.",
+  "human_playtest": "NotMeasured"
+}

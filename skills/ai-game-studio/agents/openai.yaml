@@ -1,0 +1,15 @@
+interface:
+  display_name: AI Game Studio
+  short_description: Three game architects, purpose-built tools, shared state
+  default_prompt: Use $ai-game-studio to coordinate programming, art, and design architects
+    through shared project state, building and applying the tools needed to complete
+    the game.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

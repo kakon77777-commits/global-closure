@@ -1,0 +1,318 @@
+{
+  "schema": 1,
+  "passed": true,
+  "consumer": "Node vm executing index.html#game-runtime with a minimal DOM double",
+  "input": "index.html",
+  "input_sha256": "fe6001654c6776bf65f71a0c54d3a629a815c80db925cf389d2bad5d6a7941d2",
+  "witness_sha256": "ab280af65d3b9653a6210e70d2e898c6a7f6dd9497f10314144a32a4f6f0537e",
+  "checks": [
+    {
+      "name": "generated_level_is_exact_saved_design_data",
+      "passed": true,
+      "observation": {
+        "path": "design/generated/level.json",
+        "player": [
+          0,
+          0
+        ],
+        "key": [
+          0,
+          4
+        ],
+        "exit": [
+          4,
+          0
+        ]
+      }
+    },
+    {
+      "name": "all_five_actual_svg_assets_are_embedded_and_used",
+      "passed": true,
+      "observation": {
+        "floor": "bd9094b8d836e8c11a1a844f1e8c4f6110ca73baa783120207a67647664a667c",
+        "wall": "dc388c97c8a8bc6b3d1edd5b612412286e7dd32588fb67378826dab26f07e8fc",
+        "player": "17c9b8990789d1837026ad80347d16b51e878c93c1b93af8065372b9cae68c95",
+        "key": "8aa02ff69f78a309439844143d08a026722e14600626c82cb5a8c38876cc4f3c",
+        "exit": "2b2aae6a9e68bfb08e7e4b75971f544f6128be7892a2cf3664a2fd751b94799e"
+      }
+    },
+    {
+      "name": "boot_exposes_initial_position_key_and_objective",
+      "passed": true,
+      "observation": {
+        "position": [
+          0,
+          0
+        ],
+        "hasKey": false,
+        "won": false,
+        "moves": 0,
+        "event": "ready"
+      }
+    },
+    {
+      "name": "shipped_keyboard_handler_blocks_bounds_walls_and_locked_exit",
+      "passed": true,
+      "observation": [
+        {
+          "position": [
+            0,
+            0
+          ],
+          "hasKey": false,
+          "won": false,
+          "moves": 0,
+          "event": "blocked_bounds"
+        },
+        {
+          "position": [
+            1,
+            0
+          ],
+          "hasKey": false,
+          "won": false,
+          "moves": 1,
+          "event": "moved"
+        },
+        {
+          "position": [
+            1,
+            0
+          ],
+          "hasKey": false,
+          "won": false,
+          "moves": 1,
+          "event": "blocked_wall"
+        },
+        {
+          "position": [
+            2,
+            0
+          ],
+          "hasKey": false,
+          "won": false,
+          "moves": 2,
+          "event": "moved"
+        },
+        {
+          "position": [
+            3,
+            0
+          ],
+          "hasKey": false,
+          "won": false,
+          "moves": 3,
+          "event": "moved"
+        },
+        {
+          "position": [
+            3,
+            0
+          ],
+          "hasKey": false,
+          "won": false,
+          "moves": 3,
+          "event": "blocked_exit"
+        }
+      ]
+    },
+    {
+      "name": "design_solution_collects_key_on_move_8_and_wins_on_move_16",
+      "passed": true,
+      "observation": {
+        "trace": [
+          {
+            "position": [
+              0,
+              1
+            ],
+            "hasKey": false,
+            "won": false,
+            "moves": 1,
+            "event": "moved"
+          },
+          {
+            "position": [
+              0,
+              2
+            ],
+            "hasKey": false,
+            "won": false,
+            "moves": 2,
+            "event": "moved"
+          },
+          {
+            "position": [
+              1,
+              2
+            ],
+            "hasKey": false,
+            "won": false,
+            "moves": 3,
+            "event": "moved"
+          },
+          {
+            "position": [
+              2,
+              2
+            ],
+            "hasKey": false,
+            "won": false,
+            "moves": 4,
+            "event": "moved"
+          },
+          {
+            "position": [
+              2,
+              3
+            ],
+            "hasKey": false,
+            "won": false,
+            "moves": 5,
+            "event": "moved"
+          },
+          {
+            "position": [
+              2,
+              4
+            ],
+            "hasKey": false,
+            "won": false,
+            "moves": 6,
+            "event": "moved"
+          },
+          {
+            "position": [
+              1,
+              4
+            ],
+            "hasKey": false,
+            "won": false,
+            "moves": 7,
+            "event": "moved"
+          },
+          {
+            "position": [
+              0,
+              4
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 8,
+            "event": "key_collected"
+          },
+          {
+            "position": [
+              1,
+              4
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 9,
+            "event": "moved"
+          },
+          {
+            "position": [
+              2,
+              4
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 10,
+            "event": "moved"
+          },
+          {
+            "position": [
+              3,
+              4
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 11,
+            "event": "moved"
+          },
+          {
+            "position": [
+              4,
+              4
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 12,
+            "event": "moved"
+          },
+          {
+            "position": [
+              4,
+              3
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 13,
+            "event": "moved"
+          },
+          {
+            "position": [
+              4,
+              2
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 14,
+            "event": "moved"
+          },
+          {
+            "position": [
+              4,
+              1
+            ],
+            "hasKey": true,
+            "won": false,
+            "moves": 15,
+            "event": "moved"
+          },
+          {
+            "position": [
+              4,
+              0
+            ],
+            "hasKey": true,
+            "won": true,
+            "moves": 16,
+            "event": "won"
+          }
+        ],
+        "restart": {
+          "position": [
+            0,
+            0
+          ],
+          "hasKey": false,
+          "won": false,
+          "moves": 0,
+          "event": "ready"
+        }
+      }
+    },
+    {
+      "name": "wasd_uppercase_restart_repeat_and_unrelated_keys",
+      "passed": true,
+      "observation": {
+        "position": [
+          0,
+          0
+        ],
+        "hasKey": false,
+        "won": false,
+        "moves": 0,
+        "event": "ready"
+      }
+    },
+    {
+      "name": "locked_exit_witness_rejects_a_removed_lock_guard",
+      "passed": true,
+      "observation": "The same keyboard replay rejects a runtime whose locked-door condition was disabled."
+    }
+  ],
+  "boundary": "Actual shipped JavaScript, keyboard/click callbacks and DOM assignments ran. No browser engine, image decode, layout, focus, screen-reader or human playtest was exercised."
+}

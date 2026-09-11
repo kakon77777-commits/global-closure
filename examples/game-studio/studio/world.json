@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "project_id": "key-door-studio-demo",
+  "revision": 1,
+  "scope": "One offline playable key-and-door grid level, produced and integrated through programming, art and design tools.",
+  "target": "Windows desktop browser; self-contained HTML output, Python 3.10+ standard-library production tools.",
+  "integrator": "programming",
+  "contracts": [
+    "studio/game-contract.json"
+  ]
+}

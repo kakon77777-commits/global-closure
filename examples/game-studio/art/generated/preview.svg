@@ -1,0 +1,659 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="650" viewBox="0 0 760 650">
+<rect width="760" height="650" fill="#F7F6EE"/>
+<g font-family="sans-serif" fill="#203C39">
+<text x="32" y="38" font-size="22" font-weight="bold">KEY &amp; DOOR</text>
+<text x="32" y="64" font-size="13">Generated vector family · 32 × 32 logical pixels · no external assets</text>
+<g transform="translate(40 91) scale(2.5)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<text x="40" y="195" font-size="14" font-weight="bold">floor</text>
+<g transform="translate(40 213) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(184 91) scale(2.5)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(184 91) scale(2.5)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<text x="184" y="195" font-size="14" font-weight="bold">wall</text>
+<g transform="translate(184 213) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(184 213) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(328 91) scale(2.5)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(328 91) scale(2.5)">
+  <title>Teal adventurer</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.15"/>
+  <g transform="translate(0.8 0.8) scale(0.95)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 24V28H14V25 M18 25V28H22V24" fill="#203C39"/>
+    <path d="M10 18Q16 14 22 18L24 25Q16 29 8 25Z" fill="#239692"/>
+    <path d="M16 18V26" fill="none" stroke="#73CEB6"/>
+    <circle cx="16" cy="10.5" r="7" fill="#239692"/>
+    <path d="M10.5 10Q16 7 21.5 10V12Q16 19 10.5 12Z" fill="#FFF2D4"/>
+    <path d="M12 6.5Q16 4.5 20 6.5" fill="none" stroke="#73CEB6"/>
+    <circle cx="13.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <circle cx="18.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <path d="M11 22H21" fill="none"/>
+    <rect x="14.5" y="20.5" width="3" height="3" rx="0.5" fill="#F6C760"/>
+  </g>
+</g>
+<text x="328" y="195" font-size="14" font-weight="bold">player</text>
+<g transform="translate(328 213) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(328 213) scale(1)">
+  <title>Teal adventurer</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.15"/>
+  <g transform="translate(0.8 0.8) scale(0.95)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 24V28H14V25 M18 25V28H22V24" fill="#203C39"/>
+    <path d="M10 18Q16 14 22 18L24 25Q16 29 8 25Z" fill="#239692"/>
+    <path d="M16 18V26" fill="none" stroke="#73CEB6"/>
+    <circle cx="16" cy="10.5" r="7" fill="#239692"/>
+    <path d="M10.5 10Q16 7 21.5 10V12Q16 19 10.5 12Z" fill="#FFF2D4"/>
+    <path d="M12 6.5Q16 4.5 20 6.5" fill="none" stroke="#73CEB6"/>
+    <circle cx="13.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <circle cx="18.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <path d="M11 22H21" fill="none"/>
+    <rect x="14.5" y="20.5" width="3" height="3" rx="0.5" fill="#F6C760"/>
+  </g>
+</g>
+<g transform="translate(472 91) scale(2.5)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(472 91) scale(2.5)">
+  <title>Gold key</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.12"/>
+  <g transform="rotate(-32 16 16)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M13 14H28V20H24V17H21V20H17V18H13Z" fill="#F6C760"/>
+    <path d="M9 9.5A6.5 6.5 0 1 1 9 22.5A6.5 6.5 0 1 1 9 9.5Z M9 13.3A2.7 2.7 0 1 0 9 18.7A2.7 2.7 0 1 0 9 13.3Z" fill="#F6C760" fill-rule="evenodd"/>
+    <path d="M5.5 13Q7 11 9 11 M17 15.2H26.5" fill="none" stroke="#FFE9A6" stroke-width="1"/>
+  </g>
+</g>
+<text x="472" y="195" font-size="14" font-weight="bold">key</text>
+<g transform="translate(472 213) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(472 213) scale(1)">
+  <title>Gold key</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.12"/>
+  <g transform="rotate(-32 16 16)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M13 14H28V20H24V17H21V20H17V18H13Z" fill="#F6C760"/>
+    <path d="M9 9.5A6.5 6.5 0 1 1 9 22.5A6.5 6.5 0 1 1 9 9.5Z M9 13.3A2.7 2.7 0 1 0 9 18.7A2.7 2.7 0 1 0 9 13.3Z" fill="#F6C760" fill-rule="evenodd"/>
+    <path d="M5.5 13Q7 11 9 11 M17 15.2H26.5" fill="none" stroke="#FFE9A6" stroke-width="1"/>
+  </g>
+</g>
+<g transform="translate(616 91) scale(2.5)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(616 91) scale(2.5)">
+  <title>Arched exit door</title>
+
+  <path d="M4.5 29.5V13A11.5 11.5 0 0 1 27.5 13V29.5Z" fill="#98AE82" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M8 29V14A8 8 0 0 1 24 14V29Z" fill="#B87947" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M16 7V28 M11 13V27 M21 13V27" fill="none" stroke="#DBAA6E" stroke-width="1"/>
+  <path d="M10 12Q16 5.5 22 12" fill="none" stroke="#DBAA6E" stroke-width="1.5"/>
+  <path d="M4.5 29.5H27.5" fill="none" stroke="#203C39" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="18.5" cy="19" r="2.2" fill="#F6C760" stroke="#203C39" stroke-width="1"/>
+  <path d="M18.5 18A0.9 0.9 0 1 1 18.5 19.8L19.3 22H17.7L18.5 19.8A0.9 0.9 0 0 1 18.5 18Z" fill="#203C39"/>
+  <path d="M15 3H17" fill="none" stroke="#FFE9A6" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<text x="616" y="195" font-size="14" font-weight="bold">exit</text>
+<g transform="translate(616 213) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(616 213) scale(1)">
+  <title>Arched exit door</title>
+
+  <path d="M4.5 29.5V13A11.5 11.5 0 0 1 27.5 13V29.5Z" fill="#98AE82" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M8 29V14A8 8 0 0 1 24 14V29Z" fill="#B87947" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M16 7V28 M11 13V27 M21 13V27" fill="none" stroke="#DBAA6E" stroke-width="1"/>
+  <path d="M10 12Q16 5.5 22 12" fill="none" stroke="#DBAA6E" stroke-width="1.5"/>
+  <path d="M4.5 29.5H27.5" fill="none" stroke="#203C39" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="18.5" cy="19" r="2.2" fill="#F6C760" stroke="#203C39" stroke-width="1"/>
+  <path d="M18.5 18A0.9 0.9 0 1 1 18.5 19.8L19.3 22H17.7L18.5 19.8A0.9 0.9 0 0 1 18.5 18Z" fill="#203C39"/>
+  <path d="M15 3H17" fill="none" stroke="#FFE9A6" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<text x="32" y="273" font-size="12">Top: 2.5× inspection. Bottom: native 32px tiles, composited over floor.</text>
+<text x="32" y="313" font-size="14" font-weight="bold">Produced level · native 32px</text>
+<text x="300" y="313" font-size="14" font-weight="bold">Same level · 56px display tiles</text>
+<g transform="translate(32 334) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(32 334) scale(1)">
+  <title>Teal adventurer</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.15"/>
+  <g transform="translate(0.8 0.8) scale(0.95)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 24V28H14V25 M18 25V28H22V24" fill="#203C39"/>
+    <path d="M10 18Q16 14 22 18L24 25Q16 29 8 25Z" fill="#239692"/>
+    <path d="M16 18V26" fill="none" stroke="#73CEB6"/>
+    <circle cx="16" cy="10.5" r="7" fill="#239692"/>
+    <path d="M10.5 10Q16 7 21.5 10V12Q16 19 10.5 12Z" fill="#FFF2D4"/>
+    <path d="M12 6.5Q16 4.5 20 6.5" fill="none" stroke="#73CEB6"/>
+    <circle cx="13.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <circle cx="18.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <path d="M11 22H21" fill="none"/>
+    <rect x="14.5" y="20.5" width="3" height="3" rx="0.5" fill="#F6C760"/>
+  </g>
+</g>
+<g transform="translate(64 334) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(96 334) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(128 334) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(160 334) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(160 334) scale(1)">
+  <title>Arched exit door</title>
+
+  <path d="M4.5 29.5V13A11.5 11.5 0 0 1 27.5 13V29.5Z" fill="#98AE82" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M8 29V14A8 8 0 0 1 24 14V29Z" fill="#B87947" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M16 7V28 M11 13V27 M21 13V27" fill="none" stroke="#DBAA6E" stroke-width="1"/>
+  <path d="M10 12Q16 5.5 22 12" fill="none" stroke="#DBAA6E" stroke-width="1.5"/>
+  <path d="M4.5 29.5H27.5" fill="none" stroke="#203C39" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="18.5" cy="19" r="2.2" fill="#F6C760" stroke="#203C39" stroke-width="1"/>
+  <path d="M18.5 18A0.9 0.9 0 1 1 18.5 19.8L19.3 22H17.7L18.5 19.8A0.9 0.9 0 0 1 18.5 18Z" fill="#203C39"/>
+  <path d="M15 3H17" fill="none" stroke="#FFE9A6" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<g transform="translate(32 366) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(64 366) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(64 366) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(96 366) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(96 366) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(128 366) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(128 366) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(160 366) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(32 398) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(64 398) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(96 398) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(128 398) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(128 398) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(160 398) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(32 430) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(32 430) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(64 430) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(64 430) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(96 430) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(128 430) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(128 430) scale(1)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(160 430) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(32 462) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(32 462) scale(1)">
+  <title>Gold key</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.12"/>
+  <g transform="rotate(-32 16 16)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M13 14H28V20H24V17H21V20H17V18H13Z" fill="#F6C760"/>
+    <path d="M9 9.5A6.5 6.5 0 1 1 9 22.5A6.5 6.5 0 1 1 9 9.5Z M9 13.3A2.7 2.7 0 1 0 9 18.7A2.7 2.7 0 1 0 9 13.3Z" fill="#F6C760" fill-rule="evenodd"/>
+    <path d="M5.5 13Q7 11 9 11 M17 15.2H26.5" fill="none" stroke="#FFE9A6" stroke-width="1"/>
+  </g>
+</g>
+<g transform="translate(64 462) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(96 462) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(128 462) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(160 462) scale(1)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(300 334) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(300 334) scale(1.75)">
+  <title>Teal adventurer</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.15"/>
+  <g transform="translate(0.8 0.8) scale(0.95)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 24V28H14V25 M18 25V28H22V24" fill="#203C39"/>
+    <path d="M10 18Q16 14 22 18L24 25Q16 29 8 25Z" fill="#239692"/>
+    <path d="M16 18V26" fill="none" stroke="#73CEB6"/>
+    <circle cx="16" cy="10.5" r="7" fill="#239692"/>
+    <path d="M10.5 10Q16 7 21.5 10V12Q16 19 10.5 12Z" fill="#FFF2D4"/>
+    <path d="M12 6.5Q16 4.5 20 6.5" fill="none" stroke="#73CEB6"/>
+    <circle cx="13.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <circle cx="18.5" cy="11.5" r="0.75" fill="#203C39" stroke="none"/>
+    <path d="M11 22H21" fill="none"/>
+    <rect x="14.5" y="20.5" width="3" height="3" rx="0.5" fill="#F6C760"/>
+  </g>
+</g>
+<g transform="translate(356 334) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(412 334) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(468 334) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(524 334) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(524 334) scale(1.75)">
+  <title>Arched exit door</title>
+
+  <path d="M4.5 29.5V13A11.5 11.5 0 0 1 27.5 13V29.5Z" fill="#98AE82" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M8 29V14A8 8 0 0 1 24 14V29Z" fill="#B87947" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M16 7V28 M11 13V27 M21 13V27" fill="none" stroke="#DBAA6E" stroke-width="1"/>
+  <path d="M10 12Q16 5.5 22 12" fill="none" stroke="#DBAA6E" stroke-width="1.5"/>
+  <path d="M4.5 29.5H27.5" fill="none" stroke="#203C39" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="18.5" cy="19" r="2.2" fill="#F6C760" stroke="#203C39" stroke-width="1"/>
+  <path d="M18.5 18A0.9 0.9 0 1 1 18.5 19.8L19.3 22H17.7L18.5 19.8A0.9 0.9 0 0 1 18.5 18Z" fill="#203C39"/>
+  <path d="M15 3H17" fill="none" stroke="#FFE9A6" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<g transform="translate(300 390) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(356 390) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(356 390) scale(1.75)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(412 390) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(412 390) scale(1.75)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(468 390) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(468 390) scale(1.75)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(524 390) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(300 446) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(356 446) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(412 446) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(468 446) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(468 446) scale(1.75)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(524 446) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(300 502) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(300 502) scale(1.75)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(356 502) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(356 502) scale(1.75)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(412 502) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(468 502) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(468 502) scale(1.75)">
+  <title>Moss stone wall</title>
+
+  <rect x="1.5" y="3.5" width="29" height="27" rx="3.5" fill="#405C50"/>
+  <rect x="1.5" y="1.5" width="29" height="26" rx="3.5" fill="#5F7D68" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M5 6H27" fill="none" stroke="#98AE82" stroke-width="2" stroke-linecap="round"/>
+  <path d="M2.5 15.5H29.5 M16 2.5V15.5 M9 15.5V27 M24 15.5V27" fill="none" stroke="#405C50" stroke-width="1.5"/>
+</g>
+<g transform="translate(524 502) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(300 558) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(300 558) scale(1.75)">
+  <title>Gold key</title>
+
+  <ellipse cx="16" cy="28" rx="10" ry="2" fill="#203C39" opacity="0.12"/>
+  <g transform="rotate(-32 16 16)" stroke="#203C39" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M13 14H28V20H24V17H21V20H17V18H13Z" fill="#F6C760"/>
+    <path d="M9 9.5A6.5 6.5 0 1 1 9 22.5A6.5 6.5 0 1 1 9 9.5Z M9 13.3A2.7 2.7 0 1 0 9 18.7A2.7 2.7 0 1 0 9 13.3Z" fill="#F6C760" fill-rule="evenodd"/>
+    <path d="M5.5 13Q7 11 9 11 M17 15.2H26.5" fill="none" stroke="#FFE9A6" stroke-width="1"/>
+  </g>
+</g>
+<g transform="translate(356 558) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(412 558) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(468 558) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<g transform="translate(524 558) scale(1.75)">
+  <title>Stone floor</title>
+
+  <rect width="32" height="32" fill="#E8EDD5"/>
+  <path d="M0.5 32V0.5H32 M5 8H10 M24 26H28" fill="none" stroke="#CDD8B9" stroke-width="1"/>
+</g>
+<text x="32" y="642" font-size="11">Level source: design/generated/level.json. This is an art preview; gameplay integration is separate.</text>
+</g></svg>

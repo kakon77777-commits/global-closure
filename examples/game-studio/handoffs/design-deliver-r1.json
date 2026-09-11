@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "id": "7d6feb40-1300-4804-afe0-9c1878aa8ffd",
+  "created_at_utc": "2026-09-11T10:06:05.387411+00:00",
+  "project_id": "key-door-studio-demo",
+  "revision": 1,
+  "world": {
+    "path": "studio/world.json",
+    "sha256": "80951e95ffd2e8cf2e04543f4e2b22d304a1bad361d43a9144005bb3a1a8b9d0"
+  },
+  "from_role": "design",
+  "to_role": "programming",
+  "source_context": "/root/studio_design",
+  "kind": "DELIVER",
+  "reply_to": null,
+  "summary": "# Design delivery for programming\n\n- Project: `key-door-studio-demo` at `studio/world.json` revision 1.\n- Source role/context: design, host-observed `/root/studio_design`.\n- Recipient: programming; its context locator is not yet observed at delivery.\n- Integration owner: programming. No shared contract or world state was changed.\n- Delivery packet: `handoffs/design-deliver-r1.json`; it pins the baseline, contract,\n  source, producer, output and evidence bytes.\n\n## Delivered contribution\n\n`design/level_tool.py` compiles the authored `design/level-layout.txt` into the actual\ngame input `design/generated/level.json`. `design/verify_design.py` reads that saved\ninput, checks required reachability and falsifying cases, and independently replays\nmovement. Rerun commands and assumptions are in `design/README.md`.\n\nThe level is 5×5, with player `[0,0]`, key `[0,4]`, exit `[4,0]`, and 7 walls. The\ndesign intention is a brief exploration loop with an initially reachable locked\ndoor and a detour to its key. The shortest legal winning sequence is:\n\n`down down right right down down left left right right right right up up up up`\n\nThe eighth accepted move collects the key; the sixteenth wins. From a fresh start,\n`up right down right right right` exercises out-of-bounds blocking, a wall, and a\nblocked exit attempt; it should leave the player at `[3,0]` without the key or a win.\n\n## Observed checks and their limits\n\n- Production command exited 0 and emitted the contracted JSON plus a BFS witness.\n- The witness runner reported **13/13 passed**, with detailed observations saved in\n  `design/generated/verification.json`.\n- Behavioral evidence: the saved data supports the intended key-then-exit route in\n  the independent movement model. Browser consumption remains pending.\n- Discriminative evidence: named tests reject a key reachable only by crossing the\n  locked exit, isolated objectives, overlapping entities, entity/wall overlap,\n  out-of-bounds cells and boolean coordinates. Reflection and wall reordering pass.\n- Structural evidence: inputs, deterministic algorithm and byte hashes are supplied.\n  A separate clean-environment reconstruction has not been claimed.\n- The initial pre-implementation witness invocation exited 1 because `level_tool`\n  did not yet exist; after the producer was implemented, production and witnesses\n  passed. This initial result alone was not a behavioral defect diagnosis.\n- Human playtesting, visual clarity and enjoyment: `NotMeasured`.\n\nArt at host-observed `/root/studio_art` responded to the targeted affordance request:\nits planned key has a gold circular bow and toothed shaft, and its exit is a large\narched wooden door with a keyhole. This is a received description, not a claim of\ndesign-side visual inspection or independent acceptance of the gameplay validator.\nNo programming ACK or independent peer review has been received at delivery.\n\nThe ai-game-studio, global-first-completion and MSSP guidance were loaded. Missing\nMSSP reference documents were subsequently supplied by the parent from the published\nsource and read; there is no remaining source-availability blocker. No additional\nagents, installations, publication or external services were used by this role.\n\n## Required next action\n\n1. Read the shared world and contract; verify this packet against the current bytes.\n   If the baseline or contract changed, compare the change before reusing evidence.\n2. Run the design producer and witness runner, then have the integration tool consume\n   `design/generated/level.json` directly into the self-contained browser game.\n3. Exercise the blocked-movement sequence and the 16-move solution in the real runtime;\n   verify visible key possession, locked-door feedback, win state and restart.\n4. Write a receiver-produced ACK or CHALLENGE identifying what was inspected or\n   integrated and the resulting revision. Receipt, technical and product acceptance\n   remain separate. Only the integrator advances `studio/world.json`.\n\nNo design decisions or contract proposals remain unresolved. Integration acceptance\nis pending the actual programming receiver; this packet does not imply it occurred.\n",
+  "contracts": [
+    {
+      "path": "studio/game-contract.json",
+      "sha256": "1f238eda7ee5daecabe26aee996896155d239b083988f43ac6e9f6c956c943c4",
+      "bytes": 1516
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "design/README.md",
+      "sha256": "409768747236b12a55acc5d746e55c01c8f6b0198e900ed1cce508e8e5b7b39e",
+      "bytes": 2748
+    },
+    {
+      "path": "design/level-layout.txt",
+      "sha256": "6b690b51e064837d8dcd597219db7bc86f079c111f371d2b0ec36160de675224",
+      "bytes": 30
+    },
+    {
+      "path": "design/level_tool.py",
+      "sha256": "e19e4a2f2d297492896820107bab245c0b4ce676109f512b4929ca297d829153",
+      "bytes": 7427
+    },
+    {
+      "path": "design/verify_design.py",
+      "sha256": "42e20374aabb4a27c752fd2f33417004b181b53085703f6e390d45075f403bad",
+      "bytes": 6474
+    },
+    {
+      "path": "design/generated/level.json",
+      "sha256": "75c8a6387def87a916b568dabaff55a9d2d110c0c432fd7a1ceb2b013f684eaf",
+      "bytes": 350
+    },
+    {
+      "path": "design/generated/build-evidence.json",
+      "sha256": "48f0e816717fe3924a41957fd1468d2a5875fee47a6c0cc0c241ee20c31c5657",
+      "bytes": 1807
+    },
+    {
+      "path": "design/generated/verification.json",
+      "sha256": "24ecb406f035a12718733df8efb20163505ab4ed208a1e0469acd4ccc1a36c12",
+      "bytes": 9077
+    }
+  ]
+}
